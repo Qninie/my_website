@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/my_website/',
+  base: process.env.VITE_BASE_PATH || '/',
 });

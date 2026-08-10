@@ -1,6 +1,7 @@
 import { memories } from './memories.js';
 
-const baseUrl = import.meta.env?.BASE_URL ?? '/my_website/';
+const baseUrl = import.meta.env?.BASE_URL
+  ?? (window.location.hostname.endsWith('github.io') ? '/my_website/' : '/');
 const assetUrl = (filename) => `${baseUrl}assets/${filename}`;
 
 let flowerSvgId = 0;
