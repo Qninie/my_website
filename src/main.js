@@ -1,8 +1,7 @@
-import './style.css';
-import './home.css';
 import { memories } from './memories.js';
 
-const assetUrl = (filename) => `${import.meta.env.BASE_URL}assets/${filename}`;
+const baseUrl = import.meta.env?.BASE_URL ?? '/my_website/';
+const assetUrl = (filename) => `${baseUrl}assets/${filename}`;
 
 let flowerSvgId = 0;
 const flowerSvg = (className = '') => {
