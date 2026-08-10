@@ -1,4 +1,4 @@
-// Replace each image value with a local path such as "/assets/graduation.jpg".
+// Replace each image value with a URL based on import.meta.env.BASE_URL when adding local assets.
 export const memories = [
   {
     id: 'beginning',

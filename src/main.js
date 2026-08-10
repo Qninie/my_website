@@ -2,6 +2,8 @@ import './style.css';
 import './home.css';
 import { memories } from './memories.js';
 
+const assetUrl = (filename) => `${import.meta.env.BASE_URL}assets/${filename}`;
+
 let flowerSvgId = 0;
 const flowerSvg = (className = '') => {
   const id = `sakura-${flowerSvgId++}`;
@@ -121,7 +123,7 @@ document.querySelector('#app').innerHTML = `
   <div class="sakura-cursor" aria-hidden="true">${cursorFlowerSvg()}</div>
   <div class="scroll-butterfly-guide" aria-live="polite" aria-hidden="true">
     <span class="guide-tip">Click the box or scroll to begin.</span>
-    <img src="/assets/guide-butterfly-open-cropped.png" alt="" />
+    <img src="${assetUrl('guide-butterfly-open-cropped.png')}" alt="" />
   </div>
 
   <main class="home-page">
@@ -138,7 +140,7 @@ document.querySelector('#app').innerHTML = `
       <div class="hero-light" aria-hidden="true"></div>
       <div class="hero-blossom-shadow" aria-hidden="true"></div>
       <div class="hero-nature" aria-hidden="true">
-        <img class="hero-branch" src="/assets/sakura-branch.png" alt="" />
+        <img class="hero-branch" src="${assetUrl('sakura-branch.png')}" alt="" />
       </div>
       <div class="hero-petals" aria-hidden="true"><i></i><i></i><i></i></div>
       <div class="hero-intro">
@@ -149,8 +151,8 @@ document.querySelector('#app').innerHTML = `
           <div class="hero-scroll"><span>The story begins here</span><i></i></div>
           <a class="primary-button" href="#door-scene">Explore My Journey <span>↘</span></a>
           <span class="button-butterfly" aria-hidden="true">
-            <img class="butterfly-resting" src="/assets/guide-butterfly-side-cropped.png" alt="" />
-            <img class="butterfly-open" src="/assets/guide-butterfly-open-cropped.png" alt="" />
+            <img class="butterfly-resting" src="${assetUrl('guide-butterfly-side-cropped.png')}" alt="" />
+            <img class="butterfly-open" src="${assetUrl('guide-butterfly-open-cropped.png')}" alt="" />
           </span>
         </div>
       </div>
@@ -166,13 +168,13 @@ document.querySelector('#app').innerHTML = `
             <div class="discovery-progress" aria-live="polite"><span>01</span><i></i><b>04</b></div>
           </div>
           <div class="blossom-tree" aria-label="Interactive blossom memory tree">
-            <img class="tree-art" src="/assets/memory-tree-filled.png" alt="A full watercolor cherry blossom tree" />
+            <img class="tree-art" src="${assetUrl('memory-tree-filled.png')}" alt="A full watercolor cherry blossom tree" />
             ${memories.map((memory,i)=>`
               <button class="memory-flower" data-index="${i}" style="--tree-x:${memory.tree.x}%;--tree-y:${memory.tree.y}%" aria-label="Discover ${memory.title} memory">
                 <span class="bud-layer">${flowerSvg('memory-closed-flower')}</span>
                 <span class="bloom-layer">${flowerSvg('memory-flower-svg')}</span>
               </button>`).join('')}
-            <img class="tree-guide-butterfly" src="/assets/guide-butterfly-open-cropped.png" alt="" aria-hidden="true" />
+            <img class="tree-guide-butterfly" src="${assetUrl('guide-butterfly-open-cropped.png')}" alt="" aria-hidden="true" />
             <div class="tree-petals" aria-hidden="true"><i></i><i></i><i></i></div>
           </div>
         </section>
@@ -192,7 +194,7 @@ document.querySelector('#app').innerHTML = `
       <div class="journey-layout">
         <div class="timeline-rail" aria-hidden="true">
           <i></i>
-          <img class="timeline-butterfly" src="/assets/guide-butterfly-open-cropped.png" alt="" />
+          <img class="timeline-butterfly" src="${assetUrl('guide-butterfly-open-cropped.png')}" alt="" />
         </div>
         <ol class="journey-timeline">
           <li class="journey-milestone">
