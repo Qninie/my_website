@@ -1,43 +1,51 @@
 // Replace each image value with a local path such as "/assets/graduation.jpg".
 export const memories = [
   {
-    id: 'graduation',
-    title: 'Graduation',
-    detail: 'A new beginning · 2025',
-    description: 'A meaningful milestone marking the beginning of my professional journey.',
+    id: 'beginning',
+    chapter: '01',
+    title: 'Where It All Began',
+    detail: 'From curiosity to creating.',
+    description: 'I started my journey without knowing exactly where it would lead. Through university projects, new experiences, and plenty of learning along the way, I gradually discovered my interest in creating digital experiences that bring creativity and technology together. Looking back at where I started reminds me how much I’ve grown — and how much more there is to explore.',
     image: '',
-    art: 'graduation',
-    tree: { x: 42, y: 23 },
+    art: 'beginning',
+    gallery: [
+      { label: 'Then', caption: 'Where it started', image: '' },
+      { label: 'Now', caption: 'Still learning, still growing.', image: '' }
+    ],
+    tree: { x: 50, y: 29 },
     position: { x: 50, y: 12 }
   },
   {
-    id: 'internship',
-    title: 'Internship Experience',
-    detail: 'Learning in practice',
-    description: 'Gaining practical experience in UI/UX research, wireframing, interface refinement and frontend implementation.',
+    id: 'proud-moment',
+    chapter: '02',
+    title: 'A Proud Moment',
+    detail: 'Dean’s List · Five consecutive semesters · 2023–Present',
+    description: 'One of the moments that reminded me how far I’ve come. It represents the effort, persistence and learning behind the achievement—not simply the result itself.',
     image: '',
     art: 'internship',
-    tree: { x: 76, y: 38 },
+    tree: { x: 65, y: 43 },
     position: { x: 88, y: 48 }
   },
   {
-    id: 'hitern',
-    title: 'Hitern',
-    detail: 'Capstone project',
-    description: 'A web-based internship document management system developed as my capstone project.',
+    id: 'beyond-screen',
+    chapter: '03',
+    title: 'Beyond the Screen',
+    detail: 'The person behind the work',
+    description: 'A glimpse into the interests, small joys and experiences that shape who I am when I step away from designing and building.',
     image: '',
     art: 'hitern',
-    tree: { x: 59, y: 58 },
+    tree: { x: 51, y: 58 },
     position: { x: 50, y: 86 }
   },
   {
-    id: 'achievement',
-    title: 'Achievement',
-    detail: 'Moments of growth',
-    description: 'A collection of academic and personal milestones that shaped my growth.',
+    id: 'what-drives-me',
+    chapter: '04',
+    title: 'What Drives Me',
+    detail: 'Creating, learning and growing',
+    description: 'I enjoy turning ideas into thoughtful experiences, learning through each challenge and finding the balance between creativity, design and technology.',
     image: '',
     art: 'achievement',
-    tree: { x: 25, y: 43 },
+    tree: { x: 35, y: 43 },
     position: { x: 12, y: 50 }
   }
 ];
