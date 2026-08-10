@@ -198,47 +198,68 @@ document.querySelector('#app').innerHTML = `
         </div>
         <ol class="journey-timeline">
           <li class="journey-milestone">
-            <span class="milestone-year">2023</span>
+            <span class="milestone-year">2020</span>
             <div class="milestone-copy">
-              <p class="milestone-type">The foundation</p>
-              <h3>Began my Information Science degree</h3>
-              <p>At UiTM Puncak Perdana, I began building a foundation in information systems, interaction design and web development.</p>
-              <span class="milestone-tag">Bachelor’s Degree · UiTM</span>
+              <p class="milestone-type">The starting point</p>
+              <h3>SPM · SMJK Krian</h3>
+              <p>A starting point that opened the door to the next stage of my academic journey.</p>
+              <div class="milestone-highlights">
+                <span><strong>SPM</strong> Graduate</span>
+                <span><strong>SMJK</strong> Krian</span>
+              </div>
             </div>
           </li>
           <li class="journey-milestone">
-            <span class="milestone-year">2023–25</span>
+            <span class="milestone-year">2023</span>
             <div class="milestone-copy">
-              <p class="milestone-type">Learning by making</p>
-              <h3>Ideas became working experiences</h3>
-              <p>I led and contributed to academic products—from an educational app prototype to hostel and event management systems—while earning Dean’s List recognition for five consecutive semesters.</p>
-              <span class="milestone-tag">UX projects · Frontend development</span>
+              <p class="milestone-type">Building my foundation</p>
+              <h3>STPM · SMK Panglima Bukit Gantang</h3>
+              <p>Completed Form 6 and built a stronger academic foundation before moving on to university.</p>
+              <div class="milestone-highlights">
+                <span><strong>3.17</strong> CGPA</span>
+                <span><strong>3.5</strong> MUET Band</span>
+                <span><strong>2023</strong> Completed</span>
+              </div>
+            </div>
+          </li>
+          <li class="journey-milestone">
+            <span class="milestone-year">2023–<br>2026</span>
+            <div class="milestone-copy">
+              <p class="milestone-type">Discovering my direction</p>
+              <h3>Bachelor of Information Systems Management · UiTM</h3>
+              <p>Explored information systems through academic and hands-on projects while developing a growing interest in UI/UX and frontend development.</p>
+              <div class="milestone-highlights">
+                <span><strong>3.67</strong> CGPA</span>
+                <span><strong>5×</strong> Dean’s List</span>
+                <span><strong>Bachelor’s</strong> Degree</span>
+              </div>
             </div>
           </li>
           <li class="journey-milestone journey-milestone--featured">
             <span class="milestone-year">Mar–Aug<br>2026</span>
             <div class="milestone-copy">
-              <p class="milestone-type">Into practice</p>
-              <h3>UI/UX Intern at Hitachi eBworx</h3>
-              <p>I designed and enhanced more than 50 responsive interfaces for digital banking and insurance products, contributing to four product initiatives alongside designers and business consultants.</p>
-              <div class="milestone-stats"><span><strong>50+</strong> interfaces</span><span><strong>4</strong> initiatives</span></div>
-            </div>
-          </li>
-          <li class="journey-milestone">
-            <span class="milestone-year">2026</span>
-            <div class="milestone-copy">
-              <p class="milestone-type">Capstone project</p>
-              <h3>Built Hitern end to end</h3>
-              <p>I designed and developed a role-based internship document management platform with secure workflows, notifications and dashboards for interns, supervisors and HR.</p>
-              <span class="milestone-tag">React · Node.js · Express · MySQL</span>
+              <p class="milestone-type">Stepping into the industry</p>
+              <h3>UI/UX Intern · Hitachi eBworx</h3>
+              <p>Gained practical industry exposure through research, wireframing, interface refinement, frontend implementation, and responsive testing.</p>
+              <div class="milestone-highlights">
+                <span><strong>50+</strong> Wireframe Screens</span>
+                <span><strong>4</strong> Projects</span>
+                <span><strong>UI/UX</strong> Internship</span>
+              </div>
             </div>
           </li>
           <li class="journey-milestone journey-milestone--next">
-            <span class="milestone-year">Next</span>
+            <span class="milestone-year">2026</span>
             <div class="milestone-copy">
-              <p class="milestone-type">The fresh-graduate chapter</p>
-              <h3>The journey continues…</h3>
-              <p>I’m looking for a UI/UX or frontend opportunity where I can keep learning, contribute thoughtfully and create experiences people genuinely enjoy using.</p>
+              <p class="milestone-type">What’s next?</p>
+              <h3>The journey continues</h3>
+              <p>Ready to take the next step into my professional journey while continuing to learn, create, and grow.</p>
+              <div class="milestone-highlights">
+                <span><strong>Final-Year</strong> Undergraduate</span>
+                <span><strong>2026</strong> Expected Graduation</span>
+                <span><strong>Open</strong> to Opportunities</span>
+                <span><strong>UI/UX</strong> · Frontend</span>
+              </div>
             </div>
           </li>
         </ol>

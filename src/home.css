@@ -119,6 +119,47 @@
 @media(max-width:720px){.scroll-butterfly-guide{display:none}}
 @media(prefers-reduced-motion:reduce){.scroll-butterfly-guide{display:none}}
 
+/* Chapter Two — highlighted academic and career details */
+.journey-layout{width:min(1180px,100%)}
+.journey-timeline{gap:clamp(100px,12vw,165px)}
+.milestone-copy,
+.journey-milestone--featured .milestone-copy{
+  width:min(500px,100%);
+  padding:clamp(28px,3vw,42px);
+  border:1px solid rgba(185,122,149,.24);
+  background:rgba(250,248,245,.72);
+  box-shadow:0 20px 60px rgba(89,69,75,.045);
+}
+.milestone-copy h3{font-size:clamp(30px,3.2vw,48px)}
+.milestone-copy>p:not(.milestone-type){font-size:14px;line-height:1.9}
+.milestone-highlights{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px 30px;
+  margin-top:30px;
+  padding-top:22px;
+  border-top:1px solid rgba(47,47,47,.1);
+  color:#746d70;
+  font-size:9px;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.milestone-highlights span{display:flex;align-items:baseline;gap:7px}
+.milestone-highlights strong{color:#b97a95;font:clamp(20px,2vw,28px)/1 Italiana;text-transform:none}
+.journey-milestone:nth-child(even) .milestone-highlights{justify-content:flex-end}
+
+@media(max-width:900px){
+  .milestone-copy,
+  .journey-milestone--featured .milestone-copy{width:min(620px,100%);padding:30px}
+  .journey-milestone:nth-child(even) .milestone-highlights{justify-content:flex-start}
+}
+@media(max-width:720px){
+  .milestone-copy,
+  .journey-milestone--featured .milestone-copy{padding:24px 20px}
+  .milestone-copy h3{font-size:30px}
+  .milestone-highlights{gap:16px 22px}
+}
+
 /* Remove hidden tooltip width so the butterfly sits exactly on the timeline. */
 .scroll-butterfly-guide:not(.has-tip) .guide-tip{display:none}.scroll-butterfly-guide.is-on-timeline img{transform-origin:center}
 
