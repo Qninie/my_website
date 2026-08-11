@@ -507,17 +507,38 @@ const doorScene = document.querySelector('.door-scene');
 const journeySection = document.querySelector('.journey-section');
 const timelineRail = document.querySelector('.timeline-rail');
 const discoverNavLink = document.querySelector('.site-nav a[data-section="door-scene"]');
+const doorOpenRatio = .68;
+const reducedMotion = matchMedia('(prefers-reduced-motion:reduce)').matches;
+let hasSettledAtOpenDoor = false;
+let previousDoorProgress = 0;
+let previousScrollY = scrollY;
+
+function getFullyOpenDoorPosition() {
+  const scrollDistance = Math.max(0, doorScene.offsetHeight - innerHeight);
+  return doorScene.offsetTop + scrollDistance * doorOpenRatio;
+}
+
 discoverNavLink.addEventListener('click', event => {
   event.preventDefault();
-  const fullyOpenPosition = doorScene.offsetTop + doorScene.offsetHeight - innerHeight - 2;
+  const fullyOpenPosition = getFullyOpenDoorPosition();
+  hasSettledAtOpenDoor = true;
   history.replaceState(null, '', '#door-scene');
-  window.scrollTo({ top:fullyOpenPosition, behavior:matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth' });
+  window.scrollTo({ top:fullyOpenPosition, behavior:reducedMotion ? 'auto' : 'smooth' });
 });
 let scrollFrame = 0;
 function updateScrollScenes() {
   const rect = doorScene.getBoundingClientRect();
   const distance = doorScene.offsetHeight - innerHeight;
-  const progress = Math.max(0, Math.min(1, -rect.top / distance));
+  const openingDistance = Math.max(1, distance * doorOpenRatio);
+  const progress = Math.max(0, Math.min(1, -rect.top / openingDistance));
+  const scrollingDown = scrollY > previousScrollY;
+  if (!reducedMotion && !hasSettledAtOpenDoor && scrollingDown && previousDoorProgress < .94 && progress >= .94) {
+    hasSettledAtOpenDoor = true;
+    window.scrollTo({ top:getFullyOpenDoorPosition(), behavior:'smooth' });
+  }
+  if (progress < .65) hasSettledAtOpenDoor = false;
+  previousDoorProgress = progress;
+  previousScrollY = scrollY;
   doorScene.style.setProperty('--door-progress', progress.toFixed(3));
   const journeyRect = journeySection.getBoundingClientRect();
   const railRect = timelineRail.getBoundingClientRect();
