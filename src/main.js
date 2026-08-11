@@ -770,17 +770,23 @@ function openMemory(index, trigger, isNewDiscovery = false) {
   image.setAttribute('aria-label', `${memory.title} placeholder image`);
   const photoMarquee = modal.querySelector('.memory-photo-marquee');
   const detailBlossom = modal.querySelector('.detail-blossom');
-  const hasGallery = Array.isArray(memory.gallery);
+  const galleryItems = Array.isArray(memory.gallery) ? memory.gallery.filter(item => item.image) : [];
+  const hasGallery = galleryItems.length > 0;
   photoMarquee.hidden = !hasGallery;
   detailBlossom.hidden = hasGallery;
   modal.querySelector('.memory-detail').classList.toggle('has-photo-gallery', hasGallery);
   if (hasGallery) {
-    const slides = [...memory.gallery, ...memory.gallery];
+    const desktopSecondsPerPhoto = 24 / 7;
+    const mobileSecondsPerPhoto = 20 / 7;
+    photoMarquee.style.setProperty('--memory-scroll-duration', `${galleryItems.length * desktopSecondsPerPhoto}s`);
+    photoMarquee.style.setProperty('--memory-scroll-duration-mobile', `${galleryItems.length * mobileSecondsPerPhoto}s`);
+    const slides = [...galleryItems, ...galleryItems];
     photoMarquee.querySelector('.memory-photo-track').innerHTML = slides.map((item, galleryIndex) => `
-      <figure class="memory-photo-card" ${galleryIndex >= memory.gallery.length ? 'aria-hidden="true"' : ''}>
-        ${item.image ? `<img src="${item.image}" alt="${item.label} — ${item.caption}">` : `<div class="memory-photo-placeholder">Photo</div>`}
+      <figure class="memory-photo-card" ${galleryIndex >= galleryItems.length ? 'aria-hidden="true"' : ''}>
+        <img src="${item.image}" alt="${item.label} — ${item.caption}">
         <figcaption><strong>${item.label}</strong><span>${item.caption}</span></figcaption>
       </figure>`).join('');
+    photoMarquee.scrollLeft = 0;
   }
   modal.hidden = false;
   document.body.classList.add('modal-open');

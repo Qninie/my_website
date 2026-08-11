@@ -262,5 +262,5 @@ html{scrollbar-gutter:stable}.memory-modal .back-to-tree,.project-modal-close{po
 .memory-photo-marquee::-webkit-scrollbar{display:none}
 .memory-photo-marquee.is-dragging{cursor:grabbing;user-select:none}
 .memory-photo-marquee.is-dragging .memory-photo-track{animation-play-state:paused}
-.memory-photo-track{animation-duration:24s}
-@media(max-width:720px){.memory-photo-track{animation-duration:20s}}
+.memory-photo-track{animation-duration:var(--memory-scroll-duration,24s)}
+@media(max-width:720px){.memory-photo-track{animation-duration:var(--memory-scroll-duration-mobile,20s)}}
