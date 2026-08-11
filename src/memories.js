@@ -25,7 +25,7 @@ export const memories = [
     art: 'internship',
     gallery: [
       { label: 'The Beginning', caption: 'Taking part as a dancer and singer', image: './assets/flower2-performer.jpg' },
-      { label: 'A Milestone', caption: 'My final MAJIS · Semester 4 Dean’s List', image: './assets/flower2-deans-list.jpg' },
+      { label: 'A Milestone', caption: 'My final MAJIS', image: './assets/flower2-deans-list.jpg' },
       { label: 'Full Circle', caption: 'Returning to ISSNITE in a senior role', image: './assets/flower2-senior.jpg' }
     ],
     tree: { x: 65, y: 43 },
@@ -35,10 +35,19 @@ export const memories = [
     id: 'beyond-screen',
     chapter: '03',
     title: 'Beyond the Screen',
-    detail: 'The person behind the work',
-    description: 'A glimpse into the interests, small joys and experiences that shape who I am when I step away from designing and building.',
+    detail: 'The people, places and small joys that keep me grounded',
+    description: 'Beyond studying, designing and building, I value the small experiences that help me recharge and stay grounded. I unwind at places such as Aquaria KLCC, enjoy music and concerts, and treasure time with my university friends. Taking on different part-time jobs—including working as a food-tasting promoter—has helped me become more independent, adaptable and confident when meeting people. Whether I am spending time close to nature, caring for my lovely hamster Mario, or photographing scenes that catch my eye, these moments reflect the person I am beyond the screen.',
     image: '',
     art: 'hitern',
+    gallery: [
+      { label: 'A Quiet Reset', caption: 'Taking time to unwind at Aquaria KLCC', image: './assets/flower3-aquaria.jpg' },
+      { label: 'Music & Memories', caption: 'Experiencing IVE in concert', image: './assets/flower3-concert.jpg' },
+      { label: 'My People', caption: 'Making memories with my university friends', image: './assets/flower3-friends.jpg' },
+      { label: 'Learning by Doing', caption: 'Working as a food-tasting promoter', image: './assets/flower3-part-time.jpg' },
+      { label: 'Close to Nature', caption: 'Slowing down and enjoying the outdoors', image: './assets/flower3-nature.jpg' },
+      { label: 'Little Companion', caption: 'Spending time with my lovely hamster, Mario', image: './assets/flower3-mario.jpg' },
+      { label: 'Through My Eyes', caption: 'Capturing scenes that inspire me', image: './assets/flower3-photography.jpg' }
+    ],
     tree: { x: 51, y: 58 },
     position: { x: 50, y: 86 }
   },
