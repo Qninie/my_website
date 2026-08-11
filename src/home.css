@@ -206,3 +206,15 @@ html{scrollbar-gutter:stable}.memory-modal .back-to-tree,.project-modal-close{po
 @media(max-width:900px){.scroll-butterfly-guide.is-on-timeline img{width:40px;height:40px}}
 @media(max-width:720px){.scroll-butterfly-guide{display:flex}.scroll-butterfly-guide .guide-tip{display:none}.scroll-butterfly-guide img{width:34px;height:34px}}
 @media(prefers-reduced-motion:reduce){.scroll-butterfly-guide{display:none}}
+
+/* Chapter One — extra breathing room around the memory garden */
+.memory-heading{top:clamp(145px,15vh,175px)}
+.blossom-tree{inset:45vh 0 9vh}
+@media(max-width:1024px){
+  .memory-heading{top:clamp(120px,13vh,145px)}
+  .blossom-tree{inset:43vh 0 8vh}
+}
+@media(max-width:720px){
+  .memory-heading{top:104px}
+  .blossom-tree{inset:40vh 0 7vh}
+}
