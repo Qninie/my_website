@@ -250,3 +250,17 @@ html{scrollbar-gutter:stable}.memory-modal .back-to-tree,.project-modal-close{po
   .journey-actions .button-butterfly{top:-34px;right:-8px}
   .journey-actions .hero-scroll i{top:-27px}
 }
+
+/* Every memory gallery shares one pace and supports swipe/drag navigation. */
+.memory-photo-marquee{
+  overflow-x:auto;
+  cursor:grab;
+  touch-action:pan-y;
+  scrollbar-width:none;
+  overscroll-behavior-x:contain;
+}
+.memory-photo-marquee::-webkit-scrollbar{display:none}
+.memory-photo-marquee.is-dragging{cursor:grabbing;user-select:none}
+.memory-photo-marquee.is-dragging .memory-photo-track{animation-play-state:paused}
+.memory-photo-track{animation-duration:24s}
+@media(max-width:720px){.memory-photo-track{animation-duration:20s}}

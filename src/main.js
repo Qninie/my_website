@@ -701,6 +701,25 @@ const memoryState = {
 let modalTrigger = null;
 let treeReady = false;
 
+const memoryPhotoMarquee = modal.querySelector('.memory-photo-marquee');
+let galleryDrag = null;
+memoryPhotoMarquee.addEventListener('pointerdown', event => {
+  galleryDrag = { pointerId:event.pointerId, startX:event.clientX, startScroll:memoryPhotoMarquee.scrollLeft };
+  memoryPhotoMarquee.classList.add('is-dragging');
+  memoryPhotoMarquee.setPointerCapture(event.pointerId);
+});
+memoryPhotoMarquee.addEventListener('pointermove', event => {
+  if (!galleryDrag || galleryDrag.pointerId !== event.pointerId) return;
+  memoryPhotoMarquee.scrollLeft = galleryDrag.startScroll - (event.clientX - galleryDrag.startX);
+});
+const finishGalleryDrag = event => {
+  if (!galleryDrag || galleryDrag.pointerId !== event.pointerId) return;
+  galleryDrag = null;
+  memoryPhotoMarquee.classList.remove('is-dragging');
+};
+memoryPhotoMarquee.addEventListener('pointerup', finishGalleryDrag);
+memoryPhotoMarquee.addEventListener('pointercancel', finishGalleryDrag);
+
 function renderMemoryState() {
   const complete = memoryState.discoveredMemories.size === memories.length;
   flowers.forEach((button, index) => {
