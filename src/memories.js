@@ -9,8 +9,8 @@ export const memories = [
     image: '',
     art: 'beginning',
     gallery: [
-      { label: 'Then', caption: 'Where it started', image: '' },
-      { label: 'Now', caption: 'Still learning, still growing.', image: '' }
+      { label: 'Then', caption: 'Where it started', image: './assets/flower1-then.jpg' },
+      { label: 'Now', caption: 'Still learning, still growing.', image: './assets/flower1-now.jpg' }
     ],
     tree: { x: 50, y: 29 },
     position: { x: 50, y: 12 }
