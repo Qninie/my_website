@@ -230,7 +230,7 @@ html{scrollbar-gutter:stable}.memory-modal .back-to-tree,.project-modal-close{po
 
 /* Perch the butterfly and floating petal on the button's top edge. */
 .journey-actions .button-butterfly{
-  top:-46px;
+  top:-37px;
   right:-10px;
   bottom:auto;
 }
@@ -247,6 +247,6 @@ html{scrollbar-gutter:stable}.memory-modal .back-to-tree,.project-modal-close{po
   50%{transform:translate(-50%,6px) rotate(35deg);opacity:.35}
 }
 @media(max-width:720px){
-  .journey-actions .button-butterfly{top:-41px;right:-8px}
+  .journey-actions .button-butterfly{top:-34px;right:-8px}
   .journey-actions .hero-scroll i{top:-27px}
 }
