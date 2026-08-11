@@ -218,3 +218,12 @@ html{scrollbar-gutter:stable}.memory-modal .back-to-tree,.project-modal-close{po
   .memory-heading{top:104px}
   .blossom-tree{inset:40vh 0 7vh}
 }
+
+/* Place the hero story cue beneath and centered on its button. */
+.primary-button{margin-top:0}
+.journey-actions .hero-scroll{
+  align-self:stretch;
+  justify-content:center;
+  margin-top:14px;
+  text-align:center;
+}

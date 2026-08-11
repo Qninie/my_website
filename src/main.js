@@ -148,8 +148,8 @@ document.querySelector('#app').innerHTML = `
         <p class="hero-lead">Always learning, always improving, and excited to build experiences that people genuinely enjoy using.</p>
         <p class="hero-note">Creating thoughtful digital experiences, one project at a time.</p>
         <div class="journey-actions">
-          <div class="hero-scroll"><span>The story begins here</span><i></i></div>
           <a class="primary-button" href="#door-scene">Explore My Journey <span>↘</span></a>
+          <div class="hero-scroll"><span>The story begins here</span><i></i></div>
           <span class="button-butterfly" aria-hidden="true">
             <img class="butterfly-resting" src="${assetUrl('guide-butterfly-side-cropped.png')}" alt="" />
             <img class="butterfly-open" src="${assetUrl('guide-butterfly-open-cropped.png')}" alt="" />
