@@ -19,10 +19,15 @@ export const memories = [
     id: 'proud-moment',
     chapter: '02',
     title: 'A Proud Moment',
-    detail: 'Dean’s List · Five consecutive semesters · 2023–Present',
-    description: 'One of the moments that reminded me how far I’ve come. It represents the effort, persistence and learning behind the achievement—not simply the result itself.',
+    detail: 'Performance · Dean’s List · A full-circle journey',
+    description: 'Since Semester 1, I have taken part as both a dancer and singer in MAJIS and ISSNITE. MAJIS is a celebratory gathering that recognises Dean’s List students, while ISSNITE is our faculty’s farewell celebration for final-semester students. I began by contributing as a performer, then attended my final MAJIS in Semester 5 to celebrate my Semester 4 Dean’s List achievement. Later, I returned to ISSNITE in a senior role—a full-circle moment that showed how much I had grown in confidence, experience and responsibility.',
     image: '',
     art: 'internship',
+    gallery: [
+      { label: 'The Beginning', caption: 'Taking part as a dancer and singer', image: './assets/flower2-performer.jpg' },
+      { label: 'A Milestone', caption: 'My final MAJIS · Semester 4 Dean’s List', image: './assets/flower2-deans-list.jpg' },
+      { label: 'Full Circle', caption: 'Returning to ISSNITE in a senior role', image: './assets/flower2-senior.jpg' }
+    ],
     tree: { x: 65, y: 43 },
     position: { x: 88, y: 48 }
   },
