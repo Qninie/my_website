@@ -61,23 +61,28 @@ const treeFlowers = [
 const projects = [
   {
     number:'01', slug:'hitern', title:'Hitern', type:'Capstone · Full-stack web application',
-    role:'UI/UX Designer & Full-stack Developer',
+    role:'FULL-STACK DEVELOPMENT',
     summary:'A role-based internship document management platform that simplifies submissions, approvals and progress tracking for interns, supervisors and HR.',
     challenge:'Internship documents and approvals can become fragmented across messages, files and different stakeholders.',
     approach:'I mapped the multi-role workflow, designed responsive dashboards and built secure document, notification and approval experiences.',
     outcome:'A complete working capstone product with role-based access, RESTful APIs and dashboard analytics.',
     tools:['React','Tailwind CSS','Node.js','Express','MySQL'],
-    link:'https://qninie.github.io/hitern_system/'
+    images:['hitern-login.png','hitern-intern-dashboard.png','hitern-supervisor-dashboard.png','hitern-hr-dashboard.png'],
+    link:'https://qninie.github.io/hitern_system/',
+    manual:'HITERN_User_Manual.pdf'
   },
   {
-    number:'02', slug:'language', title:'IT Languages Learning', type:'UX case study · Mobile prototype',
+    number:'02', slug:'language', title:'EduVerse', type:'UX case study · Figma mobile prototype',
     role:'Team Leader & UI/UX Designer',
-    summary:'A mobile learning concept designed to make technical-language lessons clearer, friendlier and easier to complete.',
-    challenge:'Learners needed a less intimidating way to understand introductory technical language concepts.',
-    approach:'I led the design workflow, developed the interface in Figma and refined key tasks through user-centred testing.',
-    outcome:'The improved prototype increased task-completion efficiency by 20% during testing.',
-    tools:['Figma','Prototyping','User testing','Canva'],
-    link:'https://youtu.be/IMaTKmI0Mkg?si=P6-LQWeK41Fss2wA'
+    summary:'A Figma prototype that makes learning programming feel structured, motivating and social.',
+    challenge:'Beginners often find coding overwhelming and learning resources scattered.',
+    approach:'I led the UX process from research and wireframes to an interactive Figma prototype.',
+    outcome:'User testing improved readability, navigation, attendance tracking and community bookmarks.',
+    highlights:[['5','Languages'],['3','Learning levels'],['Figma','Interactive prototype']],
+    tools:['Figma','Wireframing','Prototyping','User Testing'],
+    images:['eduverse-welcome.png','eduverse-login.png','eduverse-home.png','eduverse-profile.png','eduverse-notifications.png','eduverse-settings.png'],
+    link:'https://youtu.be/lMaTKmI0Mkg?si=cWsmk6KDcG7va0zB',
+    prototype:'https://www.figma.com/proto/l8da9LnvNeLf5GwDJYAUtX/IMS564-USER-EXPERIENCE?node-id=0-1&t=y0G3xgvQTiP1PP54-1'
   },
   {
     number:'03', slug:'hostel', title:'Hostel Management', type:'Responsive web development',
@@ -87,6 +92,7 @@ const projects = [
     approach:'I organised complex records into a responsive dashboard and implemented both light and dark interface themes.',
     outcome:'A deployed frontend experience that demonstrates responsive layouts, structured data presentation and theme switching.',
     tools:['HTML','CSS','JavaScript','Bootstrap'],
+    images:['hostel-login.png','hostel-home.png','hostel-dashboard.png','hostel-list.png','hostel-students.png','hostel-room-status.png','hostel-register-student.png','hostel-settings.png'],
     link:'https://qninie.github.io/Hostel-system-management/'
   },
   {
@@ -148,8 +154,8 @@ document.querySelector('#app').innerHTML = `
         <p class="hero-lead">Always learning, always improving, and excited to build experiences that people genuinely enjoy using.</p>
         <p class="hero-note">Creating thoughtful digital experiences, one project at a time.</p>
         <div class="journey-actions">
-          <a class="primary-button" href="#door-scene">Explore My Journey <span>↘</span></a>
-          <div class="hero-scroll"><span>The story begins here</span><i></i></div>
+          <a class="primary-button" href="#door-scene">Explore My Journey</a>
+          <div class="hero-scroll"><i></i></div>
           <span class="button-butterfly" aria-hidden="true">
             <img class="butterfly-resting" src="${assetUrl('guide-butterfly-side-cropped.png')}" alt="" />
             <img class="butterfly-open" src="${assetUrl('guide-butterfly-open-cropped.png')}" alt="" />
@@ -163,7 +169,7 @@ document.querySelector('#app').innerHTML = `
         <section class="memory-garden" aria-labelledby="memory-heading">
           <div class="memory-heading">
             <p class="scene-label">Chapter one · Discover me</p>
-            <h2 id="memory-heading">Discover the moments that helped me <em>grow.</em></h2>
+            <h2 id="memory-heading">Discover the moments that helped me <em>grow</em></h2>
             <p class="tree-instruction">Select the glowing flower to discover a memory.</p>
             <div class="discovery-progress" aria-live="polite"><span>01</span><i></i><b>04</b></div>
           </div>
@@ -187,8 +193,8 @@ document.querySelector('#app').innerHTML = `
     <section id="journey" class="journey-section" aria-labelledby="journey-title">
       <header class="journey-heading">
         <p class="scene-label">Chapter two · My journey</p>
-        <h2 id="journey-title">Learning by doing.<br><em>Growing with purpose.</em></h2>
-        <p>From university projects to real product work, each step has shaped how I think, design and build.</p>
+        <h2 id="journey-title">Learning by doing<br><em>Growing with purpose</em></h2>
+        <p>From my early academic years to stepping into the industry, each chapter has shaped who I am and where I’m heading.</p>
       </header>
 
       <div class="journey-layout">
@@ -218,12 +224,11 @@ document.querySelector('#app').innerHTML = `
               <div class="milestone-highlights">
                 <span><strong>3.17</strong> CGPA</span>
                 <span><strong>3.5</strong> MUET Band</span>
-                <span><strong>2023</strong> Completed</span>
               </div>
             </div>
           </li>
           <li class="journey-milestone">
-            <span class="milestone-year">2023–<br>2026</span>
+            <span class="milestone-year">2023–2026</span>
             <div class="milestone-copy">
               <p class="milestone-type">Discovering my direction</p>
               <h3>Bachelor of Information Systems Management · UiTM</h3>
@@ -244,7 +249,6 @@ document.querySelector('#app').innerHTML = `
               <div class="milestone-highlights">
                 <span><strong>50+</strong> Wireframe Screens</span>
                 <span><strong>4</strong> Projects</span>
-                <span><strong>UI/UX</strong> Internship</span>
               </div>
             </div>
           </li>
@@ -256,9 +260,9 @@ document.querySelector('#app').innerHTML = `
               <p>Ready to take the next step into my professional journey while continuing to learn, create, and grow.</p>
               <div class="milestone-highlights">
                 <span><strong>Final-Year</strong> Undergraduate</span>
-                <span><strong>2026</strong> Expected Graduation</span>
-                <span><strong>Open</strong> to Opportunities</span>
-                <span><strong>UI/UX</strong> · Frontend</span>
+                <span><strong>2027</strong> Expected Graduation</span>
+                <span><strong>Open</strong> to Opportunities In</span>
+                <span class="opportunity-roles"><strong>UI/UX</strong><i>·</i><strong>Frontend</strong></span>
               </div>
             </div>
           </li>
@@ -270,7 +274,7 @@ document.querySelector('#app').innerHTML = `
       <header class="work-heading">
         <div>
           <p class="scene-label">Chapter three · Selected work</p>
-          <h2 id="work-title">Where ideas become<br><em>useful experiences.</em></h2>
+          <h2 id="work-title">Where ideas become<br><em>useful experiences</em></h2>
         </div>
         <p>A selection of projects that show how I move between user experience thinking, interface design and frontend development.</p>
       </header>
@@ -280,6 +284,9 @@ document.querySelector('#app').innerHTML = `
           <article class="work-card work-card--${project.slug} ${index === 0 ? 'work-card--featured' : ''}" data-project="${index}">
             <button class="project-preview" type="button" aria-label="View ${project.title} case study">
               <span class="project-number">${project.number}</span>
+              ${project.images ? `<span class="screenshot-carousel project-screenshot-carousel" aria-hidden="true">
+                ${project.images.map((image,index) => `<img class="${index === 0 ? 'is-active' : ''}" src="${assetUrl(image)}" alt="">`).join('')}
+              </span>` : ''}
               <span class="project-mockup" aria-hidden="true">
                 <i class="mockup-browser"><b></b><b></b><b></b><span></span><em></em><strong></strong></i>
                 ${project.slug === 'language' ? '<i class="mockup-phone"><b></b><span></span><em></em></i>' : ''}
@@ -373,7 +380,7 @@ document.querySelector('#app').innerHTML = `
             <label><span>Name</span><input type="text" name="name" autocomplete="name" placeholder="Your name" required></label>
             <label><span>Email</span><input type="email" name="email" autocomplete="email" placeholder="your@email.com" required></label>
             <label><span>Message</span><textarea name="message" rows="5" placeholder="Tell me about your opportunity, project, or just say hello…" required></textarea></label>
-            <button type="submit">Open email draft <span>→</span></button>
+            <button type="submit">Open email draft</button>
             <p class="form-note">This opens your email app with the message prepared.</p>
           </form>
         </div>
@@ -388,26 +395,26 @@ document.querySelector('#app').innerHTML = `
   </main>
 
   <div class="memory-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
-    <button class="back-to-tree" aria-label="Back to the blossom tree"><span>←</span> Back to the tree</button>
     <div class="memory-detail">
       <div class="detail-blossom" aria-hidden="true">
         ${flowerSvg('detail-flower-svg')}
         <div class="modal-image" role="img"></div>
       </div>
       <div class="memory-photo-marquee" aria-label="Then and now photo story" hidden><div class="memory-photo-track"></div></div>
-      <div class="modal-copy"><p class="scene-label">A memory from my journey</p><h2 id="modal-title"></h2><p class="modal-description"></p><small class="modal-detail"></small></div>
+      <div class="modal-copy"><p class="scene-label">A memory from my journey</p><h2 id="modal-title" tabindex="-1"></h2><p class="modal-description"></p><small class="modal-detail"></small></div>
     </div>
   </div>
 
   <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" hidden>
     <div class="project-case-study">
-      <button class="project-modal-close" type="button" aria-label="Close project case study"><span>←</span> Back to selected work</button>
+      <button class="project-modal-close" type="button" aria-label="Back to selected work"><span>←</span> Back to selected work</button>
       <div class="case-study-visual" aria-hidden="true">
         <span class="project-mockup"><i class="mockup-browser"><b></b><b></b><b></b><span></span><em></em><strong></strong></i></span>
+        <div class="screenshot-carousel case-screenshot-carousel" hidden></div>
       </div>
       <div class="case-study-copy">
         <p class="scene-label">Selected case study · <span class="case-number"></span></p>
-        <h2 id="project-modal-title"></h2>
+        <h2 id="project-modal-title" tabindex="-1"></h2>
         <p class="case-role"></p>
         <p class="case-summary"></p>
         <dl class="case-details">
@@ -415,8 +422,13 @@ document.querySelector('#app').innerHTML = `
           <div><dt>My approach</dt><dd class="case-approach"></dd></div>
           <div><dt>The outcome</dt><dd class="case-outcome"></dd></div>
         </dl>
+        <div class="case-highlights" hidden></div>
         <ul class="case-tools"></ul>
-        <a class="case-live-link" target="_blank" rel="noreferrer">View live project <span>↗</span></a>
+        <div class="case-actions">
+          <a class="case-live-link" target="_blank" rel="noreferrer">View live project</a>
+          <a class="case-prototype-link" target="_blank" rel="noreferrer" hidden>View Figma prototype</a>
+          <a class="case-manual-link" download="HITERN_User_Manual.pdf" hidden>Download user manual</a>
+        </div>
       </div>
     </div>
   </div>
@@ -526,6 +538,48 @@ discoverNavLink.addEventListener('click', event => {
   window.scrollTo({ top:fullyOpenPosition, behavior:reducedMotion ? 'auto' : 'smooth' });
 });
 let scrollFrame = 0;
+let treeButterflyTourStarted = false;
+let treeButterflyTourComplete = false;
+
+function startTreeButterflyTour() {
+  if (treeButterflyTourStarted || reducedMotion) return;
+  const flowerStops = [...document.querySelectorAll('.memory-flower')].map(flower => {
+    const flowerRect = flower.getBoundingClientRect();
+    return {
+      x: flowerRect.left + flowerRect.width / 2,
+      y: flowerRect.top + flowerRect.height / 2
+    };
+  });
+  if (flowerStops.length !== memories.length) return;
+
+  treeButterflyTourStarted = true;
+  const finalStop = { x: innerWidth * .78, y: innerHeight * .62 };
+  const tourStops = [
+    { x: -60, y: Math.max(innerHeight * .55, flowerStops[0].y + 70) },
+    ...flowerStops,
+    finalStop
+  ];
+  const offsets = [0, .12, .32, .50, .68, .86];
+  const keyframes = tourStops.map((stop, stopIndex) => ({
+    offset: offsets[stopIndex],
+    transform: `translate3d(${stop.x}px,${stop.y}px,0) translate(-50%,-50%) scale(${stopIndex ? 1 : .72})`,
+    opacity: stopIndex ? 1 : 0,
+    easing: 'cubic-bezier(.35,.05,.25,1)'
+  }));
+
+  const tour = scrollButterflyGuide.animate(keyframes, {
+    duration: 7200,
+    fill: 'forwards'
+  });
+  tour.finished.then(() => {
+    treeButterflyTourComplete = true;
+    scrollButterflyGuide.style.setProperty('--guide-screen-x', '78vw');
+    scrollButterflyGuide.style.setProperty('--guide-screen-y', '62vh');
+    scrollButterflyGuide.classList.add('has-tip');
+    tour.cancel();
+  }).catch(() => {});
+}
+
 function updateScrollScenes() {
   const rect = doorScene.getBoundingClientRect();
   const distance = doorScene.offsetHeight - innerHeight;
@@ -564,11 +618,12 @@ function updateScrollScenes() {
   scrollButterflyGuide.style.setProperty('--guide-screen-x', `${guideX}px`);
   scrollButterflyGuide.style.setProperty('--guide-screen-y', `${guideY}px`);
   scrollButterflyGuide.classList.toggle('is-following', guideVisible);
-  scrollButterflyGuide.classList.toggle('has-tip', treeGuideVisible);
+  scrollButterflyGuide.classList.toggle('has-tip', treeGuideVisible && treeButterflyTourComplete);
   scrollButterflyGuide.classList.toggle('is-tree-orbiting', treeGuideVisible);
   scrollButterflyGuide.classList.toggle('is-on-timeline', journeyGuideVisible);
   scrollButterflyGuide.setAttribute('aria-hidden', String(!guideVisible));
   scrollGuideTip.textContent = 'Click a flower to discover more about Queenie.';
+  if (treeGuideVisible) startTreeButterflyTour();
   hero.classList.toggle('guide-is-travelling', guideVisible);
   document.querySelector('.home-nav').classList.toggle('has-background', scrollY > 8);
   scrollFrame = 0;
@@ -624,6 +679,39 @@ const workObserver = new IntersectionObserver(entries => {
 }, { threshold:.15 });
 workCards.forEach(card => workObserver.observe(card));
 
+const preparedScreenshotCarousels = new WeakSet();
+function prepareScreenshotCarousel(carousel) {
+  if (!carousel || preparedScreenshotCarousels.has(carousel)) return;
+  const slides = [...carousel.querySelectorAll('img')];
+  if (slides.length < 2) return;
+  const hoverTarget = carousel.closest('.project-preview, .case-study-visual') ?? carousel;
+  let currentSlide = 0;
+  let slideTimer = null;
+  const showSlide = nextSlide => {
+    const previousSlide = slides[currentSlide];
+    previousSlide.classList.add('is-leaving');
+    previousSlide.classList.remove('is-active');
+    window.setTimeout(() => previousSlide.classList.remove('is-leaving'), 600);
+    currentSlide = nextSlide % slides.length;
+    slides[currentSlide].classList.add('is-active');
+  };
+  const startSlides = () => {
+    if (slideTimer) return;
+    carousel.classList.add('is-playing');
+    slideTimer = window.setInterval(() => showSlide(currentSlide + 1), 1350);
+  };
+  const stopSlides = () => {
+    window.clearInterval(slideTimer);
+    slideTimer = null;
+    carousel.classList.remove('is-playing');
+    showSlide(0);
+  };
+  hoverTarget.addEventListener('pointerenter', startSlides);
+  hoverTarget.addEventListener('pointerleave', stopSlides);
+  preparedScreenshotCarousels.add(carousel);
+}
+document.querySelectorAll('.project-screenshot-carousel').forEach(prepareScreenshotCarousel);
+
 new IntersectionObserver(([entry], observer) => {
   if (!entry.isIntersecting) return;
   skillsSection.classList.add('is-visible');
@@ -664,10 +752,30 @@ function openProject(index, trigger) {
   projectModal.querySelector('.case-challenge').textContent = project.challenge;
   projectModal.querySelector('.case-approach').textContent = project.approach;
   projectModal.querySelector('.case-outcome').textContent = project.outcome;
+  const highlights = projectModal.querySelector('.case-highlights');
+  highlights.hidden = !project.highlights;
+  highlights.innerHTML = project.highlights?.map(([value, label]) => `<span><strong>${value}</strong>${label}</span>`).join('') ?? '';
   projectModal.querySelector('.case-tools').innerHTML = project.tools.map(tool => `<li>${tool}</li>`).join('');
+  const projectVisual = projectModal.querySelector('.case-study-visual');
+  const caseCarousel = projectVisual.querySelector('.case-screenshot-carousel');
+  const hasScreenshots = Array.isArray(project.images) && project.images.length > 0;
+  caseCarousel.hidden = !hasScreenshots;
+  if (hasScreenshots && caseCarousel.dataset.project !== project.slug) {
+    caseCarousel.dataset.project = project.slug;
+    caseCarousel.innerHTML = project.images.map((image,index) => `<img class="${index === 0 ? 'is-active' : ''}" src="${assetUrl(image)}" alt="">`).join('');
+  }
+  projectVisual.classList.toggle('has-project-image', Boolean(project.image) || hasScreenshots);
+  projectVisual.style.backgroundImage = project.image ? `url("${assetUrl(project.image)}")` : '';
+  if (hasScreenshots) prepareScreenshotCarousel(caseCarousel);
   const link = projectModal.querySelector('.case-live-link');
   link.href = project.link;
-  link.textContent = project.slug === 'language' || project.slug === 'event' ? 'Watch project walkthrough ↗' : 'View live project ↗';
+  link.textContent = project.slug === 'language' || project.slug === 'event' ? 'Watch project walkthrough' : 'View live project';
+  const prototypeLink = projectModal.querySelector('.case-prototype-link');
+  prototypeLink.hidden = !project.prototype;
+  if (project.prototype) prototypeLink.href = project.prototype;
+  const manualLink = projectModal.querySelector('.case-manual-link');
+  manualLink.hidden = !project.manual;
+  if (project.manual) manualLink.href = assetUrl(project.manual);
   projectModal.hidden = false;
   document.body.classList.add('modal-open');
   requestAnimationFrame(() => projectModal.classList.add('is-open'));
@@ -682,7 +790,6 @@ workCards.forEach((card,index) => {
   card.querySelectorAll('.project-preview,.case-study-link').forEach(button => button.addEventListener('click', () => openProject(index, button)));
 });
 projectClose.addEventListener('click', closeProject);
-projectModal.addEventListener('click', event => { if (event.target === projectModal) closeProject(); });
 
 const flowers = [...document.querySelectorAll('.memory-flower')];
 const progressLabel = document.querySelector('.discovery-progress span');
@@ -691,7 +798,6 @@ const garden = document.querySelector('.memory-garden');
 const treeInstruction = document.querySelector('.tree-instruction');
 const guideButterfly = document.querySelector('.tree-guide-butterfly');
 const progress = document.querySelector('.discovery-progress');
-const backButton = modal.querySelector('.back-to-tree');
 const memoryState = {
   viewMode: 'tree',
   currentMemory: null,
@@ -704,6 +810,7 @@ let treeReady = false;
 const memoryPhotoMarquee = modal.querySelector('.memory-photo-marquee');
 let galleryDrag = null;
 memoryPhotoMarquee.addEventListener('pointerdown', event => {
+  if (memoryPhotoMarquee.classList.contains('is-single-photo')) return;
   galleryDrag = { pointerId:event.pointerId, startX:event.clientX, startScroll:memoryPhotoMarquee.scrollLeft };
   memoryPhotoMarquee.classList.add('is-dragging');
   memoryPhotoMarquee.setPointerCapture(event.pointerId);
@@ -773,6 +880,7 @@ function openMemory(index, trigger, isNewDiscovery = false) {
   const galleryItems = Array.isArray(memory.gallery) ? memory.gallery.filter(item => item.image) : [];
   const hasGallery = galleryItems.length > 0;
   photoMarquee.hidden = !hasGallery;
+  photoMarquee.classList.remove('is-single-photo');
   detailBlossom.hidden = hasGallery;
   modal.querySelector('.memory-detail').classList.toggle('has-photo-gallery', hasGallery);
   if (hasGallery) {
@@ -792,7 +900,7 @@ function openMemory(index, trigger, isNewDiscovery = false) {
   document.body.classList.add('modal-open');
   garden.classList.add('is-softened');
   requestAnimationFrame(() => modal.classList.add('is-open'));
-  backButton.focus();
+  modal.querySelector('#modal-title').focus();
 }
 
 flowers.forEach((button, index) => {
@@ -823,15 +931,10 @@ function closeModal() {
     memoryState.currentMemory = null;
   }, 500);
 }
-backButton.addEventListener('click', closeModal);
-modal.addEventListener('click', event => { if (event.target === modal) closeModal(); });
+modal.addEventListener('click', closeModal);
 window.addEventListener('keydown', event => {
   if (event.key === 'Escape' && !modal.hidden) closeModal();
   if (event.key === 'Escape' && !projectModal.hidden) closeProject();
-  if (event.key === 'Tab' && !modal.hidden) {
-    event.preventDefault();
-    backButton.focus();
-  }
 });
 
 if (matchMedia('(prefers-reduced-motion:reduce)').matches) {

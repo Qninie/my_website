@@ -1,6 +1,6 @@
 .home-page{background:#faf8f5}.home-nav{position:fixed;z-index:80;inset:0 0 auto;display:flex;justify-content:space-between;align-items:center;padding:24px 4.5vw;transition:.4s}.home-nav.has-background{background:rgba(250,248,245,.82);backdrop-filter:blur(12px)}.home-mark{font:25px "Cormorant Garamond"}.home-mark span{color:#b97a95}.journey-link{font-size:10px;letter-spacing:.14em;text-transform:uppercase}.journey-link span{margin-left:14px}.scene-label{font-size:10px;font-weight:500;letter-spacing:.19em;text-transform:uppercase;color:#9d6b80}
 .greeting-scene{height:100vh;position:relative;overflow:hidden;background:#fff}.greeting-kicker{position:absolute;left:50%;top:calc(50% - clamp(115px,11vw,155px));margin:0;transform:translateX(-50%);color:#b97a95;font-size:12px;font-weight:400;letter-spacing:.42em;text-indent:.42em;text-transform:uppercase}.greeting-list{position:absolute;left:50%;top:50%;width:min(92vw,1000px);height:1px;transform:translate(-50%,-50%);text-align:center}.greeting-word{position:absolute;left:0;right:0;top:50%;margin:0;font:clamp(62px,10vw,132px)/.9 "Cormorant Garamond","Noto Serif CJK JP","Hiragino Mincho ProN","Yu Mincho",serif;opacity:0;transform:translateY(calc(-50% + 14px)) scale(.985);transition:opacity .65s,transform .65s}.greeting-word.is-visible{opacity:1;transform:translateY(-50%) scale(1)}.begin-cue{position:absolute;left:50%;top:calc(50% + clamp(85px,9vw,125px));display:flex;flex-direction:column;align-items:center;gap:12px;color:#8baa84;font-size:9px;letter-spacing:.17em;text-transform:uppercase;opacity:0;transform:translate(-50%,12px);transition:.7s;white-space:nowrap}.begin-cue.is-visible{opacity:1;transform:translate(-50%,0)}.begin-cue i,.hero-scroll i{width:8px;height:13px;border-radius:70% 0 70% 0;background:#f4c7d7;animation:cuepetal 2s ease-in-out infinite}.intro-petals i,.hero-petals i{position:absolute;top:-5%;left:calc(10% + var(--i)*16%);width:7px;height:11px;border-radius:70% 0 70% 0;background:#f9dce7;opacity:.55;animation:softfall calc(10s + var(--i)*1.2s) linear infinite;animation-delay:calc(var(--i)*-2s)}
-.hero-scene{height:115vh;min-height:760px;position:relative;display:flex;align-items:center;overflow:hidden;background:#faf8f5}.hero-branch{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.78;transform:scale(1.04);animation:cameraease 12s ease-in-out infinite alternate}.hero-intro{position:relative;z-index:2;width:min(680px,84vw);margin-left:9vw;padding-top:4vh}.hero-intro h1{font:clamp(68px,9vw,128px)/.92 "Cormorant Garamond";margin:25px 0}.hero-intro h1 em{color:#b97a95;font-style:normal}.hero-lead{max-width:570px;font-size:clamp(16px,1.5vw,20px);line-height:1.65}.hero-note{margin-top:16px;font-size:13px;color:#666}.journey-actions{position:relative;display:flex;flex-direction:column;align-items:flex-start;width:max-content;margin-top:34px}.primary-button{display:inline-flex;align-items:center;justify-content:space-between;gap:35px;width:100%;margin-top:14px;padding:16px 22px;border:1px solid #b97a95;background:rgba(250,248,245,.8);font-size:10px;letter-spacing:.13em;text-transform:uppercase;transition:.25s}.primary-button:hover,.primary-button:focus-visible{background:#b97a95;color:white}.hero-scroll{position:static;display:flex;align-items:center;gap:16px;padding-left:0;font-size:9px;text-transform:uppercase;letter-spacing:.16em}.hero-petals i{--i:1}.hero-petals i:nth-child(2){--i:3}.hero-petals i:nth-child(3){--i:5}
+.hero-scene{height:115vh;min-height:760px;position:relative;display:flex;align-items:center;overflow:hidden;background:#faf8f5}.hero-branch{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.78;transform:scale(1.04);animation:cameraease 12s ease-in-out infinite alternate}.hero-intro{position:relative;z-index:2;width:min(680px,84vw);margin-left:9vw;padding-top:4vh}.hero-intro h1{font:clamp(68px,9vw,128px)/.92 "Cormorant Garamond";margin:25px 0}.hero-intro h1 em{color:#b97a95;font-style:normal}.hero-lead{max-width:570px;font-size:clamp(16px,1.5vw,20px);line-height:1.65}.hero-note{margin-top:16px;font-size:13px;color:#666}.journey-actions{position:relative;display:flex;flex-direction:column;align-items:flex-start;width:max-content;margin-top:50px}.primary-button{display:inline-flex;align-items:center;justify-content:space-between;gap:35px;width:100%;margin-top:14px;padding:16px 22px;border:1px solid #b97a95;background:rgba(250,248,245,.8);font-size:10px;letter-spacing:.13em;text-transform:uppercase;transition:.25s}.primary-button:hover,.primary-button:focus-visible{background:#b97a95;color:white}.hero-scroll{position:static;display:flex;align-items:center;gap:16px;padding-left:0;font-size:9px;text-transform:uppercase;letter-spacing:.16em}.hero-petals i{--i:1}.hero-petals i:nth-child(2){--i:3}.hero-petals i:nth-child(3){--i:5}
 .butterfly-guide{position:fixed;z-index:30;left:50%;top:45%;width:54px;opacity:0;pointer-events:none}.butterfly-guide svg{overflow:visible}.wing{fill:#d9a8bc;opacity:.75;transform-box:fill-box;transform-origin:center}.butterfly-body{fill:none;stroke:#51434a;stroke-width:2;stroke-linecap:round}.butterfly-guide.is-flying{animation:butterflypath 5s cubic-bezier(.45,.05,.35,1) forwards}.butterfly-guide.is-flying .left-wing{animation:flapleft .3s ease-in-out infinite alternate}.butterfly-guide.is-flying .right-wing{animation:flapright .3s ease-in-out infinite alternate}
 .door-scene{--door-progress:0;height:220vh;position:relative;background:#f2ede7}.door-sticky{position:sticky;top:0;height:100vh;overflow:hidden}.paper-panel{position:absolute;z-index:10;top:0;width:50.5%;height:100%;background:#faf9f7;will-change:transform}.panel-left{left:0;transform:translateX(calc(var(--door-progress)*-101%))}.panel-right{right:0;transform:translateX(calc(var(--door-progress)*101%))}.paper-panel:before{content:"";position:absolute;inset:5%;border:1px solid rgba(185,122,149,.1);background:linear-gradient(90deg,transparent 49.7%,rgba(47,47,47,.035) 50%,transparent 50.3%)}.panel-left i,.panel-right i{position:absolute;top:50%;width:35px;border-top:1px solid rgba(185,122,149,.35)}.panel-left i{right:8%}.panel-right i{left:8%}
 .memory-garden{position:absolute;inset:0;display:grid;grid-template-columns:38% 62%;background:#f2ede7}.memory-heading{align-self:center;padding-left:7vw;position:relative;z-index:3}.memory-heading h2{font:clamp(44px,5.4vw,80px)/.98 "Cormorant Garamond";margin:24px 0}.memory-heading h2 em{font-style:normal;color:#b97a95}.memory-heading>p:last-of-type{font-size:12px;line-height:1.7}.discovery-progress{display:flex;align-items:center;gap:12px;margin-top:35px;font:15px "Cormorant Garamond";color:#b97a95}.discovery-progress i{width:70px;border-top:1px solid #cbb9bf}.discovery-progress b{font-weight:400;color:#92888b}.discovery-progress.is-complete:after{content:"All memories discovered";margin-left:15px;font:9px DM Sans;letter-spacing:.12em;text-transform:uppercase;color:#6d806a}
@@ -146,6 +146,8 @@
 }
 .milestone-highlights span{display:flex;align-items:baseline;gap:7px}
 .milestone-highlights strong{color:#b97a95;font:clamp(20px,2vw,28px)/1 "Cormorant Garamond";text-transform:none}
+.milestone-highlights .opportunity-roles{gap:10px}
+.milestone-highlights .opportunity-roles i{color:#746d70;font-style:normal}
 .journey-milestone:nth-child(even) .milestone-highlights{justify-content:flex-end}
 
 @media(max-width:900px){
@@ -164,7 +166,7 @@
 .scroll-butterfly-guide:not(.has-tip) .guide-tip{display:none}.scroll-butterfly-guide.is-on-timeline img{transform-origin:center}
 
 /* Chapter One orbit, delayed guidance, then Chapter Two timeline only. */
-.scroll-butterfly-guide.is-tree-orbiting img{animation:treecompanionorbit 4.2s cubic-bezier(.35,.05,.25,1) both}.scroll-butterfly-guide.is-tree-orbiting.has-tip .guide-tip{animation:treeguidancereveal 1.15s 3.15s ease both}.scroll-butterfly-guide.is-tree-orbiting{transition:opacity .65s ease,transform .25s linear}@keyframes treecompanionorbit{0%{transform:translate(-38vw,16vh) rotate(-16deg) scaleX(.82);opacity:0}12%{opacity:1}30%{transform:translate(-27vw,-25vh) rotate(5deg) scaleX(1)}52%{transform:translate(-6vw,-31vh) rotate(12deg) scaleX(.8)}72%{transform:translate(8vw,-10vh) rotate(-4deg) scaleX(1)}88%{transform:translate(-5vw,8vh) rotate(-8deg) scaleX(.84)}100%{transform:translate(0,0) rotate(0) scaleX(1);opacity:1}}@keyframes treeguidancereveal{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:none}}
+.scroll-butterfly-guide.is-tree-orbiting img{animation:butterflywingclap .34s ease-in-out infinite alternate}.scroll-butterfly-guide.is-tree-orbiting.has-tip .guide-tip{animation:treeguidancereveal .55s ease both}.scroll-butterfly-guide.is-tree-orbiting{transition:opacity .65s ease}@keyframes butterflywingclap{from{transform:translateY(2px) rotate(-2deg) scaleX(.58)}to{transform:translateY(-2px) rotate(2deg) scaleX(1)}}@keyframes treeguidancereveal{from{opacity:0;transform:translate(-12px,-50%)}to{opacity:1;transform:translate(0,-50%)}}
 @media(max-width:720px){.scroll-butterfly-guide.is-tree-orbiting .guide-tip{display:block;max-width:145px;padding:9px 11px;font-size:7px}}
 
 /* Keep the Chapter One label below the fixed navigation. */
@@ -174,7 +176,7 @@
 
 /* Clearer Discover composition and watercolor memory blossoms */
 .blossom-tree{inset:40vh 0 0}.memory-heading{width:min(1080px,90vw)}.memory-heading h2{font-size:clamp(36px,3.7vw,56px)}.memory-closed-flower .sakura-petal,.memory-flower-svg .sakura-petal{stroke:#df91ae;stroke-width:.7}.memory-closed-flower .sakura-heart,.memory-flower-svg .sakura-heart{stroke:#d47f9e;stroke-width:.45}.sakura-stamens path{fill:none;stroke:#efd478;stroke-width:.65;stroke-linecap:round}.sakura-stamens circle{fill:#f2d264;stroke:none}.memory-closed-flower,.memory-flower-svg{filter:drop-shadow(0 5px 7px rgba(160,93,118,.13))}.memory-flower.is-active{filter:drop-shadow(0 0 9px rgba(255,222,135,.9)) drop-shadow(0 0 20px rgba(255,235,179,.65))}.memory-garden.is-transitioning{filter:blur(5px);transform:scale(.992);transition:filter .9s ease,transform 1.15s cubic-bezier(.2,.7,.2,1),opacity .9s}.memory-flower.is-entering{animation-duration:1.28s!important;animation-timing-function:cubic-bezier(.18,.72,.18,1)!important}.flower-zoom-overlay.is-zooming{animation-duration:1.35s;animation-timing-function:cubic-bezier(.18,.72,.12,1)}.memory-detail{transition:opacity .7s ease,transform .8s cubic-bezier(.2,.75,.2,1)}
-.scroll-butterfly-guide.has-tip{--guide-screen-x:78vw!important}.scroll-butterfly-guide.has-tip img{order:1}.scroll-butterfly-guide.has-tip .guide-tip{order:2;border-radius:16px 16px 16px 3px;transform:translateX(-10px)}.scroll-butterfly-guide.has-tip .guide-tip{opacity:1;transform:none}
+.scroll-butterfly-guide.has-tip{--guide-screen-x:78vw!important;--guide-screen-y:62vh!important}.scroll-butterfly-guide.has-tip img{order:1}.scroll-butterfly-guide.has-tip .guide-tip{order:2;border-radius:16px 16px 16px 3px;transform:translateX(-10px)}.scroll-butterfly-guide.has-tip .guide-tip{opacity:1;transform:none}
 @media(max-width:1024px){.blossom-tree{inset:39vh 0 0}.memory-heading h2{font-size:clamp(34px,5vw,48px)}.scroll-butterfly-guide.has-tip{--guide-screen-x:72vw!important}}
 @media(max-width:720px){.memory-heading{top:76px}.memory-heading h2{font-size:8vw}.blossom-tree{inset:36vh 0 0}.memory-flower{width:44px;height:44px}.memory-closed-flower,.memory-flower-svg{width:44px;height:44px}}
 
@@ -264,3 +266,451 @@ html{scrollbar-gutter:stable}.memory-modal .back-to-tree,.project-modal-close{po
 .memory-photo-marquee.is-dragging .memory-photo-track{animation-play-state:paused}
 .memory-photo-track{animation-duration:var(--memory-scroll-duration,24s)}
 @media(max-width:720px){.memory-photo-track{animation-duration:var(--memory-scroll-duration-mobile,20s)}}
+
+/* Keep the gallery's soft white fade fixed on both viewport edges. */
+.memory-photo-marquee{
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 8%,#000 92%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 8%,#000 92%,transparent 100%);
+}
+.memory-photo-marquee:before,
+.memory-photo-marquee:after{
+  display:none;
+}
+
+/* Keep the completion note directly below the 01–04 progress count. */
+.discovery-progress{flex-wrap:wrap}
+.discovery-progress.is-complete:after{
+  flex:0 0 100%;
+  margin:0;
+  padding-top:2px;
+  text-align:center;
+}
+
+/* Reveal tree guidance without shifting the butterfly's landing point. */
+.scroll-butterfly-guide.is-tree-orbiting{
+  display:block;
+  width:42px;
+  height:42px;
+}
+.scroll-butterfly-guide.is-tree-orbiting img{
+  display:block;
+  width:42px;
+  height:42px;
+}
+.scroll-butterfly-guide.is-tree-orbiting .guide-tip{
+  position:absolute;
+  left:54px;
+  top:50%;
+  width:205px;
+  max-width:none;
+  transform:translate(0,-50%);
+}
+.scroll-butterfly-guide.is-tree-orbiting.has-tip .guide-tip{
+  transform:translate(0,-50%);
+}
+@media(max-width:720px){
+  .scroll-butterfly-guide.is-tree-orbiting{
+    width:34px;
+    height:34px;
+  }
+  .scroll-butterfly-guide.is-tree-orbiting img{
+    width:34px;
+    height:34px;
+  }
+}
+
+/* Case-study CTAs */
+.case-actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:20px 30px;
+  margin-top:34px;
+}
+.case-actions .case-live-link,
+.case-actions .case-prototype-link,
+.case-actions .case-manual-link{
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  margin-top:0;
+  padding-bottom:7px;
+  border-bottom:1px solid #b97a95;
+  font-size:10px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.case-actions .case-manual-link{
+  color:#687965;
+  border-bottom-color:#8baa84;
+}
+.case-actions .case-prototype-link{
+  color:#8b6776;
+}
+.case-actions .case-prototype-link[hidden],
+.case-actions .case-manual-link[hidden]{display:none}
+
+/* Match the project back control to the transparent tree back button. */
+.project-modal-close{
+  position:fixed;
+  padding:5px 0;
+  border:0;
+  background:none;
+}
+.project-modal-close:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:100%;
+  bottom:0;
+  border-bottom:1px solid #b97a95;
+  transition:right .35s;
+}
+.project-modal-close:hover:after,
+.project-modal-close:focus-visible:after{right:0}
+.project-modal-close:focus-visible{
+  outline:2px solid #b97a95;
+  outline-offset:6px;
+}
+
+/* Eduverse case-study evidence and report visual. */
+.case-study-visual.has-project-image{
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.case-study-visual.has-project-image .project-mockup{display:none}
+.case-highlights{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin:-10px 0 24px;
+}
+.case-highlights[hidden]{display:none}
+.case-highlights span{
+  display:flex;
+  min-height:76px;
+  flex-direction:column;
+  justify-content:center;
+  gap:6px;
+  padding:13px 15px;
+  border:1px solid rgba(185,122,149,.22);
+  color:#746d70;
+  font-size:8px;
+  letter-spacing:.09em;
+  line-height:1.45;
+  text-transform:uppercase;
+}
+.case-highlights strong{
+  color:#b97a95;
+  font:24px/1 "Cormorant Garamond";
+  letter-spacing:0;
+  text-transform:none;
+}
+@media(max-width:520px){
+  .case-highlights{grid-template-columns:1fr}
+  .case-highlights span{min-height:62px}
+}
+
+/* EduVerse screenshot carousel */
+.screenshot-carousel{
+  position:absolute;
+  z-index:2;
+  inset:0;
+  overflow:hidden;
+  background:#e4d9db;
+  pointer-events:none;
+}
+.screenshot-carousel[hidden]{display:none}
+.screenshot-carousel img{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transform:translateX(10%) scale(1.015);
+  transition:opacity .55s ease,transform .6s cubic-bezier(.2,.72,.2,1);
+}
+.screenshot-carousel img.is-active{
+  z-index:2;
+  opacity:1;
+  transform:none;
+}
+.screenshot-carousel img.is-leaving{
+  z-index:1;
+  opacity:0;
+  transform:translateX(-10%) scale(.99);
+}
+.project-preview:has(.project-screenshot-carousel)>.project-mockup{display:none}
+.project-preview:has(.project-screenshot-carousel) .preview-cue{z-index:5}
+.project-preview:has(.project-screenshot-carousel) .project-number{z-index:5}
+.case-screenshot-carousel{z-index:3}
+.work-card--hitern .screenshot-carousel,
+.project-modal--hitern .screenshot-carousel{background:#eaf5fc}
+.work-card--hitern .screenshot-carousel img,
+.project-modal--hitern .screenshot-carousel img{object-fit:contain}
+.work-card--hostel .screenshot-carousel,
+.project-modal--hostel .screenshot-carousel{background:#f2f4f6}
+.work-card--hostel .screenshot-carousel img,
+.project-modal--hostel .screenshot-carousel img{object-fit:contain}
+@media(prefers-reduced-motion:reduce){
+  .screenshot-carousel img{transition:none}
+}
+
+/* Make case studies quicker to scan and easier to read. */
+.case-role{
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.11em;
+}
+.case-summary{
+  max-width:620px;
+  font-size:18px;
+  font-weight:500;
+  line-height:1.65;
+}
+.case-details{
+  gap:26px;
+  margin:32px 0 26px;
+  padding:22px 0;
+}
+.case-details dt{
+  margin-bottom:10px;
+  font-size:10px;
+  font-weight:600;
+}
+.case-details dd{
+  color:#514c4e;
+  font-size:14px;
+  line-height:1.65;
+}
+.case-highlights{
+  margin:-2px 0 22px;
+}
+.case-highlights span{
+  color:#5f585b;
+  font-size:9px;
+  font-weight:500;
+}
+.case-highlights strong{
+  font-size:28px;
+}
+.case-tools li{
+  padding:9px 12px;
+  font-size:9px;
+  font-weight:500;
+}
+.case-actions .case-live-link,
+.case-actions .case-prototype-link,
+.case-actions .case-manual-link{
+  font-size:11px;
+  font-weight:500;
+}
+@media(max-width:720px){
+  .case-summary{font-size:17px}
+  .case-details{gap:18px}
+  .case-details dd{font-size:14px}
+}
+
+/* Shared garden CTA treatment; back controls intentionally excluded. */
+:is(.primary-button,.letter-button,.contact-form button,.case-actions a){
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  min-height:56px;
+  padding:16px 22px;
+  border:1px solid #b97a95;
+  border-radius:6px;
+  background:rgba(250,248,245,.82);
+  color:#2f2f2f;
+  font:500 11px/1.4 "DM Sans",sans-serif;
+  font-style:normal;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  overflow:visible;
+  cursor:pointer;
+  transition:background .3s,color .3s,border-color .3s,transform .3s;
+}
+:is(.primary-button,.letter-button,.contact-form button,.case-actions a):before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-18px;
+  width:9px;
+  height:14px;
+  border-radius:70% 0 70% 0;
+  background:#f4c7d7;
+  opacity:.9;
+  transform:translateX(-50%) rotate(25deg);
+  animation:ctaleaffloat 2s ease-in-out infinite;
+  pointer-events:none;
+}
+.primary-button:before{display:none}
+@keyframes ctaleaffloat{
+  50%{transform:translate(-50%,-5px) rotate(36deg);opacity:.55}
+}
+:is(.primary-button,.letter-button,.contact-form button,.case-actions a):hover,
+:is(.primary-button,.letter-button,.contact-form button,.case-actions a):focus-visible{
+  border-color:#b97a95;
+  background:#b97a95;
+  color:#fff;
+  transform:none;
+}
+:is(.primary-button,.letter-button,.contact-form button,.case-actions a):hover:before,
+:is(.primary-button,.letter-button,.contact-form button,.case-actions a):focus-visible:before{
+  animation:ctaleaffloat 1.35s ease-in-out infinite;
+}
+:is(.primary-button,.case-study-link,.contact-form button,.case-actions a)>span,
+.letter-button>i{
+  display:inline-block;
+  transition:transform .25s;
+}
+:is(.primary-button,.contact-form button)>span,
+.case-manual-link>span{transform-origin:center}
+:is(.primary-button,.contact-form button):hover>span,
+:is(.primary-button,.contact-form button):focus-visible>span,
+.case-manual-link:hover>span,
+.case-manual-link:focus-visible>span{transform:translate(4px,3px)}
+:is(.case-study-link,.case-live-link,.case-prototype-link):hover>span,
+:is(.case-study-link,.case-live-link,.case-prototype-link):focus-visible>span{transform:translate(4px,-3px)}
+.letter-button:hover>i,
+.letter-button:focus-visible>i{transform:rotate(90deg)}
+.case-study-link{
+  align-self:flex-start;
+  margin-top:auto;
+}
+.case-actions a{
+  margin:0;
+  padding:16px 22px;
+  border-bottom:1px solid #b97a95;
+}
+.case-actions .case-live-link,
+.case-actions .case-prototype-link,
+.case-actions .case-manual-link{
+  padding:16px 22px;
+}
+.case-actions .case-live-link{
+  border-color:#b97a95;
+  color:#8b6776;
+}
+.case-actions .case-live-link:before{background:#f4c7d7}
+.case-actions .case-live-link:hover,
+.case-actions .case-live-link:focus-visible{
+  border-color:#b97a95;
+  background:#b97a95;
+  color:#fff;
+}
+.case-actions .case-manual-link,
+.case-actions .case-prototype-link{
+  border-color:#8baa84;
+  color:#687965;
+}
+.case-actions .case-manual-link:before,
+.case-actions .case-prototype-link:before{background:#a9bea3}
+.case-actions .case-manual-link:hover,
+.case-actions .case-manual-link:focus-visible,
+.case-actions .case-prototype-link:hover,
+.case-actions .case-prototype-link:focus-visible{
+  border-color:#8baa84;
+  background:#8baa84;
+  color:#fff;
+}
+.contact-form button{width:min(290px,100%)}
+@media(max-width:720px){
+  :is(.primary-button,.letter-button,.contact-form button,.case-actions a){
+    min-height:52px;
+    padding:14px 18px;
+    font-size:10px;
+  }
+}
+
+/* Case-study back control: top-left, styled like the former tree control. */
+.project-modal .project-modal-close{
+  position:fixed!important;
+  z-index:2400;
+  left:clamp(22px,6vw,90px)!important;
+  top:30px!important;
+  right:auto!important;
+  bottom:auto!important;
+  width:220px;
+  min-height:50px;
+  padding:12px 0 13px;
+  border:0;
+  border-bottom:1px solid rgba(185,122,149,.5);
+  background:transparent;
+  color:#514b4d;
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+@media(max-width:720px){
+  .project-modal .project-modal-close{
+    left:18px!important;
+    top:18px!important;
+    width:205px;
+  }
+}
+
+/* Keep every case study visible as one balanced desktop screen. */
+@media(min-width:901px){
+  .project-case-study{
+    grid-template-columns:minmax(340px,.92fr) minmax(430px,1.08fr);
+    gap:clamp(38px,4.5vw,76px);
+    min-height:100svh;
+    padding:clamp(82px,9vh,104px) 6vw clamp(28px,4vh,46px);
+  }
+  .case-study-visual{
+    width:100%;
+    max-height:calc(100svh - 150px);
+    aspect-ratio:1.08;
+    justify-self:end;
+  }
+  .case-study-copy{
+    max-width:720px;
+    align-self:center;
+  }
+  .case-study-copy h2{
+    margin:12px 0 6px;
+    font-size:clamp(54px,5.4vw,82px);
+    line-height:.88;
+  }
+  .case-role{margin-bottom:18px}
+  .case-summary{
+    margin:0;
+    font-size:clamp(15px,1.15vw,18px);
+    line-height:1.55;
+  }
+  .case-details{
+    gap:clamp(16px,2vw,28px);
+    margin:22px 0 18px;
+    padding:17px 0;
+  }
+  .case-details dt{margin-bottom:7px}
+  .case-details dd{
+    font-size:clamp(11px,.88vw,14px);
+    line-height:1.5;
+  }
+  .case-highlights{margin:0 0 14px}
+  .case-highlights span{min-height:58px;padding:10px 12px}
+  .case-highlights strong{font-size:24px}
+  .case-tools{gap:6px}
+  .case-tools li{padding:7px 10px}
+  .case-actions{
+    gap:14px 18px;
+    margin-top:30px;
+  }
+  .case-actions .case-live-link,
+  .case-actions .case-prototype-link,
+  .case-actions .case-manual-link{
+    min-height:50px;
+    padding:12px 18px;
+  }
+  .project-modal .project-modal-close{
+    top:20px!important;
+    left:6vw!important;
+  }
+}
