@@ -60,7 +60,7 @@ const treeFlowers = [
 
 const projects = [
   {
-    number:'01', slug:'hitern', title:'Hitern', type:'Capstone · Full-stack web application',
+    number:'01', slug:'hitern', category:'web', title:'Hitern', type:'Capstone · Full-stack web application',
     role:'FULL-STACK DEVELOPMENT',
     summary:'A role-based internship document management platform that simplifies submissions, approvals and progress tracking for interns, supervisors and HR.',
     challenge:'Internship documents and approvals can become fragmented across messages, files and different stakeholders.',
@@ -72,7 +72,7 @@ const projects = [
     manual:'HITERN_User_Manual.pdf'
   },
   {
-    number:'02', slug:'language', title:'EduVerse', type:'UX case study · Figma mobile prototype',
+    number:'02', slug:'language', category:'ux', title:'EduVerse', type:'UX case study · Figma mobile prototype',
     role:'Team Leader & UI/UX Designer',
     summary:'A Figma prototype that makes learning programming feel structured, motivating and social.',
     challenge:'Beginners often find coding overwhelming and learning resources scattered.',
@@ -85,7 +85,7 @@ const projects = [
     prototype:'https://www.figma.com/proto/l8da9LnvNeLf5GwDJYAUtX/IMS564-USER-EXPERIENCE?node-id=0-1&t=y0G3xgvQTiP1PP54-1'
   },
   {
-    number:'03', slug:'hostel', title:'Hostel Management', type:'Responsive web development',
+    number:'03', slug:'hostel', category:'web', title:'Hostel Management', type:'Responsive web development',
     role:'Frontend Developer',
     summary:'A responsive system for managing student information, room availability and hostel settings in one clear interface.',
     challenge:'Hostel information needed to remain easy to scan and manage across different screens and lighting preferences.',
@@ -96,13 +96,15 @@ const projects = [
     link:'https://qninie.github.io/Hostel-system-management/'
   },
   {
-    number:'04', slug:'event', title:'Event Hall Booking', type:'Web application development',
-    role:'Team Leader & Developer',
-    summary:'A booking-management system that brings reservations, hall availability and administration into one workflow.',
-    challenge:'The booking experience required a clearer connection between customer-facing forms and administrative records.',
-    approach:'I led the team and connected the frontend booking journey to PHP and MySQL-backed reservation management.',
-    outcome:'A functional full-stack system with a more efficient reservation and administration workflow.',
-    tools:['HTML','CSS','PHP','MySQL','Laragon'],
+    number:'04', slug:'apcs', category:'web', title:'Academic Peer Counselling System', type:'Database-driven web application',
+    role:'System Developer',
+    summary:'A structured UiTM mentoring platform that connects Dean’s List mentors with students who need academic support.',
+    challenge:'Peer mentoring records were scattered, making it difficult to match students, measure academic improvement and recognize mentor contributions.',
+    approach:'I developed the web system and database workflow for student registration, automated role validation, mentor–mentee matching, session management and GPA tracking.',
+    outcome:'A tested and deployed prototype with working CRUD operations, centralized mentoring records, progress tracking and certificate management for mentors.',
+    highlights:[['4','Core data entities'],['GPA','Progress tracking'],['CRUD','Session management']],
+    tools:['PHP','MySQL','HTML','Bootstrap','phpMyAdmin','FileZilla'],
+    images:['apcs-login.png','apcs-dashboard.png','apcs-admin-management.png','apcs-session-management.png','apcs-session-list.png','apcs-certificate-management.png','apcs-certificate-list.png'],
     link:'https://youtu.be/7kEiJudpVQU?si=Jht50xd2BPfqGDux'
   }
 ];
@@ -113,6 +115,12 @@ const skillGroups = [
   { title:'Development', skills:[['Node.js & Express',68],['MySQL',72],['REST APIs',66],['Git & GitHub',76]] }
 ];
 const toolsKnown = ['Figma','React','JavaScript','HTML','CSS','Tailwind','Node.js','Express','MySQL','Git','GitHub','VS Code','Postman','Tableau','Canva','Bootstrap'];
+const toolIcons = {
+  Figma:'figma.svg', React:'react.svg', JavaScript:'javascript.svg', HTML:'html5.svg',
+  CSS:'css.svg', Tailwind:'tailwindcss.svg', 'Node.js':'nodedotjs.svg', Express:'express.svg',
+  MySQL:'mysql.svg', Git:'git.svg', GitHub:'github.svg', 'VS Code':'visualstudiocode.svg',
+  Postman:'postman.svg', Tableau:'tableau.svg', Canva:'canva.svg', Bootstrap:'bootstrap.svg'
+};
 
 document.querySelector('#app').innerHTML = `
   <header class="home-nav" aria-label="Primary navigation">
@@ -279,9 +287,17 @@ document.querySelector('#app').innerHTML = `
         <p>A selection of projects that show how I move between user experience thinking, interface design and frontend development.</p>
       </header>
 
+      <div class="work-filters" role="group" aria-label="Filter selected work by category">
+        <button class="work-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="work-filter" type="button" data-filter="web" aria-pressed="false">Web Systems</button>
+        <button class="work-filter" type="button" data-filter="ux" aria-pressed="false">UI/UX</button>
+        <button class="work-filter" type="button" data-filter="creative" aria-pressed="false">Creative Media</button>
+        <button class="work-filter" type="button" data-filter="learning" aria-pressed="false">Interactive Learning</button>
+      </div>
+
       <div class="work-grid">
         ${projects.map((project,index)=>`
-          <article class="work-card work-card--${project.slug} ${index === 0 ? 'work-card--featured' : ''}" data-project="${index}">
+          <article class="work-card work-card--${project.slug} ${index === 0 ? 'work-card--featured' : ''}" data-project="${index}" data-category="${project.category}">
             <button class="project-preview" type="button" aria-label="View ${project.title} case study">
               <span class="project-number">${project.number}</span>
               ${project.images ? `<span class="screenshot-carousel project-screenshot-carousel" aria-hidden="true">
@@ -301,6 +317,7 @@ document.querySelector('#app').innerHTML = `
             </div>
           </article>`).join('')}
       </div>
+      <p class="work-empty" hidden><strong>More work is growing here.</strong><span>New projects will be added to this category soon.</span></p>
     </section>
 
     <section id="skills" class="skills-section" aria-labelledby="skills-title">
@@ -340,7 +357,7 @@ document.querySelector('#app').innerHTML = `
           <div class="tools-track">
             ${[...toolsKnown,...toolsKnown].map((tool,index)=>`
               <div class="tool-item" ${index >= toolsKnown.length ? 'aria-hidden="true"' : ''}>
-                <span class="tool-mark">${tool.split(/\s|\./).map(word=>word[0]).join('').slice(0,3)}</span>
+                <span class="tool-mark"><img src="${assetUrl(`tool-icons/${toolIcons[tool]}`)}" alt="" loading="lazy"></span>
                 <strong>${tool}</strong>
               </div>`).join('')}
           </div>
@@ -679,6 +696,28 @@ const workObserver = new IntersectionObserver(entries => {
 }, { threshold:.15 });
 workCards.forEach(card => workObserver.observe(card));
 
+const workFilters = [...document.querySelectorAll('.work-filter')];
+const workEmpty = document.querySelector('.work-empty');
+function filterWork(category) {
+  const visibleCards = [...workCards].filter(card => category === 'all' || card.dataset.category === category);
+  workCards.forEach(card => {
+    const isVisible = visibleCards.includes(card);
+    card.hidden = !isVisible;
+    card.classList.remove('is-filter-featured','is-filter-even');
+  });
+  if (category !== 'all') {
+    visibleCards[0]?.classList.add('is-filter-featured');
+    visibleCards.slice(1).forEach((card,index) => card.classList.toggle('is-filter-even', index % 2 === 0));
+  }
+  workEmpty.hidden = visibleCards.length > 0;
+  workFilters.forEach(button => {
+    const isActive = button.dataset.filter === category;
+    button.classList.toggle('is-active', isActive);
+    button.setAttribute('aria-pressed', String(isActive));
+  });
+}
+workFilters.forEach(button => button.addEventListener('click', () => filterWork(button.dataset.filter)));
+
 const preparedScreenshotCarousels = new WeakSet();
 function prepareScreenshotCarousel(carousel) {
   if (!carousel || preparedScreenshotCarousels.has(carousel)) return;
@@ -769,7 +808,7 @@ function openProject(index, trigger) {
   if (hasScreenshots) prepareScreenshotCarousel(caseCarousel);
   const link = projectModal.querySelector('.case-live-link');
   link.href = project.link;
-  link.textContent = project.slug === 'language' || project.slug === 'event' ? 'Watch project walkthrough' : 'View live project';
+  link.textContent = project.slug === 'language' || project.slug === 'apcs' ? 'Watch project walkthrough' : 'View live project';
   const prototypeLink = projectModal.querySelector('.case-prototype-link');
   prototypeLink.hidden = !project.prototype;
   if (project.prototype) prototypeLink.href = project.prototype;

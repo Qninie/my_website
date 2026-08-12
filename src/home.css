@@ -455,6 +455,10 @@ html{scrollbar-gutter:stable}.memory-modal .back-to-tree,.project-modal-close{po
 .project-modal--hostel .screenshot-carousel{background:#f2f4f6}
 .work-card--hostel .screenshot-carousel img,
 .project-modal--hostel .screenshot-carousel img{object-fit:contain}
+.work-card--apcs .screenshot-carousel,
+.project-modal--apcs .screenshot-carousel{background:#f3f7f9}
+.work-card--apcs .screenshot-carousel img,
+.project-modal--apcs .screenshot-carousel img{object-fit:contain}
 @media(prefers-reduced-motion:reduce){
   .screenshot-carousel img{transition:none}
 }
@@ -656,6 +660,109 @@ html{scrollbar-gutter:stable}.memory-modal .back-to-tree,.project-modal-close{po
 }
 
 /* Keep every case study visible as one balanced desktop screen. */
+.work-filters{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px clamp(18px,3vw,42px);
+  width:min(1120px,100%);
+  margin:clamp(-78px,-5vw,-52px) auto clamp(60px,7vw,96px);
+  padding:0 18px 16px;
+  border-bottom:1px solid rgba(47,47,47,.1);
+}
+.work-filter{
+  position:relative;
+  padding:9px 2px;
+  border:0;
+  background:transparent;
+  color:#756e71;
+  font:500 10px/1.4 "DM Sans",sans-serif;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:color .25s;
+}
+.work-filter:after{
+  content:"";
+  position:absolute;
+  left:50%;
+  right:50%;
+  bottom:-17px;
+  border-bottom:1px solid #b97a95;
+  transition:left .3s,right .3s;
+}
+.work-filter:hover,
+.work-filter:focus-visible,
+.work-filter.is-active{color:#8b5f72}
+.work-filter.is-active:after{left:0;right:0}
+.work-filter:focus-visible{outline:2px solid rgba(185,122,149,.55);outline-offset:4px}
+.work-card[hidden]{display:none!important}
+.work-card.is-filter-featured{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);
+  align-items:center;
+  gap:clamp(35px,5vw,75px);
+  margin-top:0;
+}
+.work-card.is-filter-featured .project-preview{aspect-ratio:1.65}
+.work-card.is-filter-featured .project-info{padding-top:0}
+.work-card.is-filter-even{margin-top:clamp(80px,10vw,150px)}
+.work-empty{
+  width:min(620px,86vw);
+  margin:0 auto;
+  padding:64px 28px;
+  border:1px solid rgba(185,122,149,.28);
+  text-align:center;
+}
+.work-empty[hidden]{display:none}
+.work-empty strong,
+.work-empty span{display:block}
+.work-empty strong{font:clamp(30px,4vw,48px)/1 "Cormorant Garamond",serif;color:#b97a95}
+.work-empty span{margin-top:12px;color:#6f686b;font-size:12px;letter-spacing:.04em}
+.work-card--apcs .project-preview,
+.project-modal--apcs .case-study-visual{background:#eee1e5}
+.work-card--apcs .mockup-browser>span{background:linear-gradient(160deg,#9c7082,#d3a8b8)}
+
+/* Real application logos for the workflow marquee. */
+.tool-mark{
+  border:0;
+  border-radius:12px;
+  background:rgba(255,255,255,.74);
+  box-shadow:0 8px 24px rgba(70,60,64,.08);
+  overflow:hidden;
+}
+.tool-mark img{
+  display:block;
+  width:26px;
+  height:26px;
+  object-fit:contain;
+  transition:transform .3s;
+}
+.tool-item:hover .tool-mark{
+  border-color:transparent;
+  background:#fff;
+  color:inherit;
+  transform:translateY(-4px);
+}
+.tool-item:hover .tool-mark img{transform:scale(1.1)}
+
+@media(max-width:900px){
+  .work-card.is-filter-featured{display:block}
+  .work-card.is-filter-featured .project-info{padding-top:25px}
+}
+@media(max-width:720px){
+  .work-filters{
+    justify-content:flex-start;
+    gap:8px 20px;
+    margin:-38px auto 58px;
+    padding-inline:0;
+  }
+  .work-filter{font-size:9px}
+  .work-filter:after{bottom:-9px}
+  .work-card.is-filter-even{margin-top:0}
+}
+
 @media(min-width:901px){
   .project-case-study{
     grid-template-columns:minmax(340px,.92fr) minmax(430px,1.08fr);
