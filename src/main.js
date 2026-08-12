@@ -352,7 +352,7 @@ document.querySelector('#app').innerHTML = `
       </div>
 
       <div class="tools-showcase" aria-label="Tools and applications I use">
-        <div class="tools-intro"><p class="scene-label">Tools in my workflow</p><span>Hover to pause</span></div>
+        <div class="tools-intro"><p class="scene-label">Tools in my workflow</p></div>
         <div class="tools-marquee">
           <div class="tools-track">
             ${[...toolsKnown,...toolsKnown].map((tool,index)=>`
