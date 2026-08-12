@@ -32,21 +32,20 @@ export const memories = [
     position: { x: 88, y: 48 }
   },
   {
-    id: 'beyond-screen',
+    id: 'beyond-classroom',
     chapter: '03',
-    title: 'Beyond the Screen',
-    detail: 'The people, places and small joys that keep me grounded',
-    description: 'Beyond studying, designing and building, I value the small experiences that help me recharge and stay grounded. I unwind at places such as Aquaria KLCC, enjoy music and concerts, and treasure time with my university friends. Taking on different part-time jobs—including working as a food-tasting promoter—has helped me become more independent, adaptable and confident when meeting people. Whether I am spending time close to nature, caring for my lovely hamster Mario, or photographing scenes that catch my eye, these moments reflect the person I am beyond the screen.',
+    title: 'Beyond the Classroom',
+    detail: 'Some of the best lessons happened outside of it.',
+    description: 'Taking part in activities beyond academics gave me opportunities to connect with different people, work as part of a team, and step outside my comfort zone. Each experience taught me something new and became a meaningful part of my growth throughout my student journey.',
     image: '',
     art: 'hitern',
     gallery: [
-      { label: 'A Quiet Reset', caption: 'Taking time to unwind at Aquaria KLCC', image: './assets/flower3-aquaria.jpg' },
-      { label: 'Music & Memories', caption: 'Experiencing IVE in concert', image: './assets/flower3-concert.jpg' },
-      { label: 'My People', caption: 'Making memories with my university friends', image: './assets/flower3-friends.jpg' },
-      { label: 'Learning by Doing', caption: 'Working as a food-tasting promoter', image: './assets/flower3-part-time.jpg' },
-      { label: 'Close to Nature', caption: 'Slowing down and enjoying the outdoors', image: './assets/flower3-nature.jpg' },
-      { label: 'Little Companion', caption: 'Spending time with my lovely hamster, Mario', image: './assets/flower3-mario.jpg' },
-      { label: 'Through My Eyes', caption: 'Capturing scenes that inspire me', image: './assets/flower3-photography.jpg' }
+      { label: 'Teamwork', caption: 'Learning and contributing together', image: './assets/flower3-classroom-2.jpg' },
+      { label: 'Communication', caption: 'Connecting through shared activities', image: './assets/flower3-classroom-3.jpg' },
+      { label: 'New Experiences', caption: 'Stepping outside my comfort zone', image: './assets/flower3-classroom-4.jpg' },
+      { label: 'Growth', caption: 'Building confidence with others', image: './assets/flower3-classroom-5.jpg' },
+      { label: 'Teamwork', caption: 'Growing through every experience', image: './assets/flower3-classroom-7.jpg' },
+      { label: 'New Experiences', caption: 'Making memories beyond the classroom', image: './assets/flower3-classroom-8.jpg' }
     ],
     tree: { x: 51, y: 58 },
     position: { x: 50, y: 86 }
