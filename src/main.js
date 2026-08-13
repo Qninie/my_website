@@ -97,10 +97,10 @@ const projects = [
   },
   {
     number:'04', slug:'apcs', category:'systems', title:'Academic Peer Counselling System', type:'Database-driven web application',
-    role:'System Developer',
+    role:'TEAM LEADER · SYSTEM DEVELOPER',
     summary:'A structured UiTM mentoring platform that connects Dean’s List mentors with students who need academic support.',
     challenge:'Peer mentoring records were scattered, making it difficult to match students, measure academic improvement and recognize mentor contributions.',
-    approach:'I developed the web system and database workflow for student registration, automated role validation, mentor–mentee matching, session management and GPA tracking.',
+    approach:'As team leader and system developer, I guided the project and developed the web system and database workflow for student registration, automated role validation, mentor–mentee matching, session management and GPA tracking.',
     outcome:'A tested and deployed prototype with working CRUD operations, centralized mentoring records, progress tracking and certificate management for mentors.',
     highlights:[['4','Core data entities'],['GPA','Progress tracking'],['CRUD','Session management']],
     tools:['PHP','MySQL','HTML','Bootstrap','phpMyAdmin','FileZilla'],
