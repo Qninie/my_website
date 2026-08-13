@@ -120,10 +120,10 @@ const projects = [
   },
   {
     number:'06', slug:'kampungwai', category:'development', title:'Kampung Wai', type:'Group assignment · Cultural tourism website',
-    role:'TEAM MEMBER · WEB DESIGN & DEVELOPMENT',
+    role:'TEAM LEADER · WEB DESIGN & DEVELOPMENT',
     summary:'A multi-page destination website introducing the heritage, culture, attractions and community experiences of Kampung Wai, Perlis.',
     challenge:'Kampung Wai needed an engaging digital presence that could preserve local identity while helping visitors discover its culture and attractions.',
-    approach:'Working in a four-person team, we planned an eight-page sitemap and combined cultural storytelling, scenic media and interactive navigation into a welcoming experience.',
+    approach:'As team leader, I guided our four-person team in planning an eight-page sitemap and combining cultural storytelling, scenic media and interactive navigation into a welcoming experience.',
     outcome:'A deployed tourism website that brings the village’s history, culture, events, attractions and visitor information together in one accessible destination.',
     tools:['HTML','CSS','JavaScript','Responsive Design'],
     images:['kampung-wai-home.png','kampung-wai-about.png','kampung-wai-history.png','kampung-wai-culture.png','kampung-wai-attraction.png','kampung-wai-event.png','kampung-wai-gallery.png','kampung-wai-faq.png'],
