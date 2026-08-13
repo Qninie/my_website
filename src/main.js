@@ -60,12 +60,12 @@ const treeFlowers = [
 
 const projects = [
   {
-    number:'01', slug:'hitern', category:'web', title:'Hitern', type:'Capstone · Full-stack web application',
-    role:'FULL-STACK DEVELOPMENT',
+    number:'01', slug:'hitern', category:'systems', title:'Hitern', type:'Capstone · Full-stack web application',
+    role:'UI/UX · FULL-STACK DEVELOPMENT',
     summary:'A role-based internship document management platform that simplifies submissions, approvals and progress tracking for interns, supervisors and HR.',
     challenge:'Internship documents and approvals can become fragmented across messages, files and different stakeholders.',
     approach:'I mapped the multi-role workflow, designed responsive dashboards and built secure document, notification and approval experiences.',
-    outcome:'A complete working capstone product with role-based access, RESTful APIs and dashboard analytics.',
+    outcome:'A working role-based platform that centralizes document submission, approval tracking, notifications and internship progress monitoring.',
     tools:['React','Tailwind CSS','Node.js','Express','MySQL'],
     images:['hitern-login.png','hitern-intern-dashboard.png','hitern-supervisor-dashboard.png','hitern-hr-dashboard.png'],
     link:'https://qninie.github.io/hitern_system/',
@@ -85,7 +85,7 @@ const projects = [
     prototype:'https://www.figma.com/proto/l8da9LnvNeLf5GwDJYAUtX/IMS564-USER-EXPERIENCE?node-id=0-1&t=y0G3xgvQTiP1PP54-1'
   },
   {
-    number:'03', slug:'hostel', category:'web', title:'Hostel Management', type:'Responsive web development',
+    number:'03', slug:'hostel', category:'systems', title:'Hostel Management', type:'Responsive web development',
     role:'Frontend Developer',
     summary:'A responsive system for managing student information, room availability and hostel settings in one clear interface.',
     challenge:'Hostel information needed to remain easy to scan and manage across different screens and lighting preferences.',
@@ -96,7 +96,7 @@ const projects = [
     link:'https://qninie.github.io/Hostel-system-management/'
   },
   {
-    number:'04', slug:'apcs', category:'web', title:'Academic Peer Counselling System', type:'Database-driven web application',
+    number:'04', slug:'apcs', category:'systems', title:'Academic Peer Counselling System', type:'Database-driven web application',
     role:'System Developer',
     summary:'A structured UiTM mentoring platform that connects Dean’s List mentors with students who need academic support.',
     challenge:'Peer mentoring records were scattered, making it difficult to match students, measure academic improvement and recognize mentor contributions.',
@@ -106,6 +106,51 @@ const projects = [
     tools:['PHP','MySQL','HTML','Bootstrap','phpMyAdmin','FileZilla'],
     images:['apcs-login.png','apcs-dashboard.png','apcs-admin-management.png','apcs-session-management.png','apcs-session-list.png','apcs-certificate-management.png','apcs-certificate-list.png'],
     link:'https://youtu.be/7kEiJudpVQU?si=Jht50xd2BPfqGDux'
+  },
+  {
+    number:'05', slug:'eresume', category:'development', title:'E-Resume Website', type:'Individual project · Multi-page frontend website',
+    role:'UI DESIGN & FRONTEND DEVELOPMENT',
+    summary:'A multi-page digital resume presenting my background, education, skills, experience and achievements in a browsable web format.',
+    challenge:'A traditional resume has limited space for presenting detailed academic, personal and professional information in an engaging way.',
+    approach:'I independently planned the information structure, designed the visual identity and developed consistent navigation across seven content pages.',
+    outcome:'A deployed personal website that organises my résumé into clear sections and demonstrates foundational frontend and interface design skills.',
+    tools:['HTML','CSS','JavaScript','Responsive Design'],
+    images:['e-resume-home.png','e-resume-personal-detail.png','e-resume-education.png','e-resume-skills.png','e-resume-experience.png','e-resume-achievement.png','e-resume-references.png'],
+    link:'https://queenie-resume.netlify.app/'
+  },
+  {
+    number:'06', slug:'kampungwai', category:'development', title:'Kampung Wai', type:'Group assignment · Cultural tourism website',
+    role:'TEAM MEMBER · WEB DESIGN & DEVELOPMENT',
+    summary:'A multi-page destination website introducing the heritage, culture, attractions and community experiences of Kampung Wai, Perlis.',
+    challenge:'Kampung Wai needed an engaging digital presence that could preserve local identity while helping visitors discover its culture and attractions.',
+    approach:'Working in a four-person team, we planned an eight-page sitemap and combined cultural storytelling, scenic media and interactive navigation into a welcoming experience.',
+    outcome:'A deployed tourism website that brings the village’s history, culture, events, attractions and visitor information together in one accessible destination.',
+    tools:['HTML','CSS','JavaScript','Responsive Design'],
+    images:['kampung-wai-home.png','kampung-wai-about.png','kampung-wai-history.png','kampung-wai-culture.png','kampung-wai-attraction.png','kampung-wai-event.png','kampung-wai-gallery.png','kampung-wai-faq.png'],
+    link:'https://qninie.github.io/kampungwai/'
+  },
+  {
+    number:'07', slug:'digitalsecurity', category:'creative', title:'Digital Security', type:'Group assignment · Awareness video',
+    role:'TEAM LEADER · DIRECTOR · VIDEO EDITOR',
+    summary:'An educational awareness video introducing digital security and the importance of protecting information, devices and online activity.',
+    challenge:'Digital threats can feel technical and distant, making important security concepts difficult to communicate in an engaging, understandable way.',
+    approach:'As team leader and director, I guided the production and independently edited the final video in CapCut to shape its pacing, visual flow and message.',
+    outcome:'A completed group video that transforms research about digital security into a concise visual awareness piece for a student audience.',
+    tools:['CapCut','Video Editing','Directing','Visual Storytelling'],
+    images:['digital-security-video.png'],
+    video:'digital-security-video.m4v'
+  },
+  {
+    number:'08', slug:'livingroomgame', category:'creative', title:'Living Room Learning Game', type:'Individual lab test · Interactive presentation',
+    role:'INTERACTION DESIGN & PRESENTATION DEVELOPMENT',
+    summary:'A child-friendly PowerPoint activity that teaches common living-room objects through guided learning and a picture-based quiz.',
+    challenge:'The exercise explored how a familiar presentation tool could become a simple, understandable interactive learning experience for children.',
+    approach:'I designed the visual assets in Canva and built linked learning, quiz and feedback paths in PowerPoint across 34 interactive slides.',
+    outcome:'A small working learning activity covering 13 household objects, followed by five questions with immediate correct or incorrect feedback.',
+    highlights:[['13','Objects'],['5','Quiz questions'],['34','Interactive slides']],
+    tools:['Canva','PowerPoint','Interaction Design','Educational Content'],
+    images:['living-room-game.png'],
+    presentation:'living-room-interactive-game.pptx'
   }
 ];
 
@@ -292,7 +337,8 @@ document.querySelector('#app').innerHTML = `
 
       <div class="work-filters" role="group" aria-label="Filter selected work by category">
         <button class="work-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
-        <button class="work-filter" type="button" data-filter="web" aria-pressed="false">Web Systems</button>
+        <button class="work-filter" type="button" data-filter="systems" aria-pressed="false">Web Applications</button>
+        <button class="work-filter" type="button" data-filter="development" aria-pressed="false">Web Development</button>
         <button class="work-filter" type="button" data-filter="ux" aria-pressed="false">UI/UX Design</button>
         <button class="work-filter" type="button" data-filter="creative" aria-pressed="false">Creative Work</button>
         <span class="work-filter-indicator" aria-hidden="true"></span>
@@ -315,7 +361,7 @@ document.querySelector('#app').innerHTML = `
             <div class="project-info">
               <div class="project-title-row"><h3>${project.title}</h3><span>${project.type}</span></div>
               <p>${project.summary}</p>
-              <ul>${project.tools.slice(0,4).map(tool=>`<li>${tool}</li>`).join('')}</ul>
+              <ul>${project.tools.slice(0,5).map(tool=>`<li>${tool}</li>`).join('')}</ul>
               <button class="case-study-link" type="button">View case study <span>↗</span></button>
             </div>
           </article>`).join('')}
@@ -377,40 +423,41 @@ document.querySelector('#app').innerHTML = `
           <p class="contact-intro">My journey is just beginning. I’m currently exploring opportunities where I can continue learning, creating and growing.</p>
 
           <button class="letter-button" type="button" aria-expanded="false">
-            <span>✉</span> A letter for you <i>＋</i>
+            <span>✉</span> A LITTLE NOTE FROM ME　 <i>＋</i>
           </button>
           <div class="letter-note" hidden>
-            <p>Dear Anonymous,</p>
-            <p>Thank you for taking the time to explore my work. I’d love the opportunity to bring thoughtful design, curiosity and care to your team.</p>
+            <p>Dear Recruiter,</p>
+            <p>Thank you for taking the time to explore my work. I'm excited to begin the next chapter of my journey and always happy to connect, collaborate, or simply have a conversation about design and technology. 🌸</p>
             <p>— Queenie</p>
           </div>
 
           <address class="contact-links">
-            <a href="mailto:qthamshinee@gmail.com"><span>✉</span><div><small>Email</small><strong>qthamshinee@gmail.com</strong></div></a>
-            <a href="https://www.linkedin.com/in/queenie-tham" target="_blank" rel="noreferrer"><span>in</span><div><small>LinkedIn</small><strong>queenie-tham</strong></div></a>
-            <a href="https://github.com/Qninie" target="_blank" rel="noreferrer"><span>gh</span><div><small>GitHub</small><strong>Qninie</strong></div></a>
+            <a href="mailto:qthamshinee@gmail.com"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3zM4 7l8 6 8-6"/></svg></span><div><small>Email</small><strong>qthamshinee@gmail.com</strong></div></a>
+            <a href="https://www.linkedin.com/in/queenie-tham" target="_blank" rel="noreferrer"><span><svg class="contact-brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.1 20.45H3.54V9H7.1v11.45Z"/></svg></span><div><small>LinkedIn</small><strong>queenie-tham</strong></div></a>
+            <a href="https://github.com/Qninie" target="_blank" rel="noreferrer"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.3 9.3 0 0 0-2.94 18.12c.47.08.64-.2.64-.45v-1.8c-2.62.57-3.17-1.11-3.17-1.11-.43-1.09-1.05-1.38-1.05-1.38-.86-.59.06-.58.06-.58.95.07 1.45.98 1.45.98.85 1.44 2.22 1.03 2.76.79.09-.61.33-1.03.6-1.27-2.09-.24-4.29-1.05-4.29-4.65 0-1.03.37-1.87.97-2.53-.1-.24-.42-1.2.09-2.5 0 0 .79-.25 2.56.97a8.9 8.9 0 0 1 4.66 0c1.78-1.22 2.56-.97 2.56-.97.51 1.3.19 2.26.09 2.5.61.66.97 1.5.97 2.53 0 3.61-2.2 4.4-4.3 4.64.34.29.64.87.64 1.76v2.62c0 .25.17.54.65.45A9.3 9.3 0 0 0 12 2.8Z"/></svg></span><div><small>GitHub</small><strong>Qninie</strong></div></a>
             <a href="${assetUrl('Queenie-Tham-Resume.pdf')}" download="Queenie-Tham-Resume.pdf"><span>↓</span><div><small>Résumé</small><strong>Download PDF</strong></div></a>
           </address>
         </div>
 
         <div class="contact-form-wrap">
           <span class="contact-blossom" aria-hidden="true">${flowerSvg('contact-flower-svg')}</span>
-          <p class="scene-label">Let’s create something meaningful</p>
+          <p class="scene-label">LET'S CONNECT</p>
           <h3>Send me a message</h3>
           <form class="contact-form">
             <label><span>Name</span><input type="text" name="name" autocomplete="name" placeholder="Your name" required></label>
             <label><span>Email</span><input type="email" name="email" autocomplete="email" placeholder="your@email.com" required></label>
             <label><span>Message</span><textarea name="message" rows="5" placeholder="Tell me about your opportunity, project, or just say hello…" required></textarea></label>
-            <button type="submit">Open email draft</button>
-            <p class="form-note">This opens your email app with the message prepared.</p>
+            <button type="submit">Send a message <span aria-hidden="true">↗</span></button>
+            <p class="form-note">Opens your email app with the message prepared.</p>
           </form>
         </div>
       </div>
 
       <footer class="world-footer">
-        <span class="final-petal" aria-hidden="true"></span>
-        <p>Thank you for visiting my world.</p>
-        <span>Designed & built with care by Queenie · 2026</span>
+        <small>Designed & built with care by Queenie · 2026</small>
+        <a class="back-to-top" href="#greeting" aria-label="Back to top">
+          <span class="back-to-top-flower" aria-hidden="true">${flowerSvg('back-to-top-flower-svg')}<i>↑</i></span>
+        </a>
       </footer>
     </section>
   </main>
@@ -446,11 +493,15 @@ document.querySelector('#app').innerHTML = `
         <div class="case-highlights" hidden></div>
         <ul class="case-tools"></ul>
         <div class="case-actions">
-          <a class="case-live-link" target="_blank" rel="noreferrer">View live project</a>
-          <a class="case-prototype-link" target="_blank" rel="noreferrer" hidden>View Figma prototype</a>
-          <a class="case-manual-link" download="HITERN_User_Manual.pdf" hidden>Download user manual</a>
+          <a class="case-live-link" target="_blank" rel="noreferrer">View live project <span>↗</span></a>
+          <a class="case-prototype-link" target="_blank" rel="noreferrer" hidden>View Figma prototype <span>↗</span></a>
+          <a class="case-manual-link" target="_blank" rel="noreferrer" hidden>View user manual <span>↗</span></a>
         </div>
       </div>
+    </div>
+    <div class="project-video-viewer" hidden>
+      <button class="project-video-close" type="button" aria-label="Close video"><span>×</span> Close video</button>
+      <video controls playsinline preload="metadata"></video>
     </div>
   </div>
 `;
@@ -731,6 +782,11 @@ async function filterWork(category) {
     card.hidden = !isVisible;
     card.classList.remove('is-filter-featured','is-filter-even');
   });
+  visibleCards.forEach((card,index) => {
+    card.querySelector('.project-number').textContent = category === 'all'
+      ? projects[Number(card.dataset.project)].number
+      : String(index + 1).padStart(2,'0');
+  });
   if (category !== 'all') {
     visibleCards[0]?.classList.add('is-filter-featured');
     visibleCards.slice(1).forEach((card,index) => card.classList.toggle('is-filter-even', index % 2 === 0));
@@ -806,12 +862,15 @@ document.querySelector('.contact-form').addEventListener('submit', event => {
 
 const projectModal = document.querySelector('.project-modal');
 const projectClose = projectModal.querySelector('.project-modal-close');
+const projectVideoViewer = projectModal.querySelector('.project-video-viewer');
+const projectVideo = projectVideoViewer.querySelector('video');
+const projectVideoClose = projectVideoViewer.querySelector('.project-video-close');
 let projectTrigger = null;
 function openProject(index, trigger) {
   const project = projects[index];
   projectTrigger = trigger;
   projectModal.className = `project-modal project-modal--${project.slug}`;
-  projectModal.querySelector('.case-number').textContent = project.number;
+  projectModal.querySelector('.case-number').textContent = trigger.closest('.work-card')?.querySelector('.project-number')?.textContent ?? project.number;
   projectModal.querySelector('#project-modal-title').textContent = project.title;
   projectModal.querySelector('.case-role').textContent = project.role;
   projectModal.querySelector('.case-summary').textContent = project.summary;
@@ -834,8 +893,9 @@ function openProject(index, trigger) {
   projectVisual.style.backgroundImage = project.image ? `url("${assetUrl(project.image)}")` : '';
   if (hasScreenshots) prepareScreenshotCarousel(caseCarousel);
   const link = projectModal.querySelector('.case-live-link');
-  link.href = project.link;
-  link.textContent = project.slug === 'language' || project.slug === 'apcs' ? 'Watch project walkthrough' : 'View live project';
+  link.href = project.video ? assetUrl(project.video) : project.presentation ? assetUrl(project.presentation) : project.link;
+  link.dataset.video = project.video ? assetUrl(project.video) : '';
+  link.innerHTML = `${project.video ? 'View video' : project.presentation ? 'Open interactive PPTX' : project.slug === 'language' || project.slug === 'apcs' ? 'Watch project walkthrough' : 'View live project'} <span>↗</span>`;
   const prototypeLink = projectModal.querySelector('.case-prototype-link');
   prototypeLink.hidden = !project.prototype;
   if (project.prototype) prototypeLink.href = project.prototype;
@@ -848,10 +908,32 @@ function openProject(index, trigger) {
   projectClose.focus();
 }
 function closeProject() {
+  projectVideo.pause();
+  projectVideo.removeAttribute('src');
+  projectVideo.load();
+  projectVideoViewer.hidden = true;
+  projectModal.classList.remove('is-video-open');
   projectModal.classList.remove('is-open');
   document.body.classList.remove('modal-open');
   setTimeout(() => { projectModal.hidden = true; projectTrigger?.focus(); }, 450);
 }
+projectModal.querySelector('.case-live-link').addEventListener('click', event => {
+  const videoSource = event.currentTarget.dataset.video;
+  if (!videoSource) return;
+  event.preventDefault();
+  projectVideo.src = videoSource;
+  projectVideoViewer.hidden = false;
+  projectModal.classList.add('is-video-open');
+  projectVideoViewer.scrollIntoView({ behavior:'smooth', block:'start' });
+  projectVideo.play().catch(() => {});
+  projectVideoClose.focus();
+});
+projectVideoClose.addEventListener('click', () => {
+  projectVideo.pause();
+  projectVideoViewer.hidden = true;
+  projectModal.classList.remove('is-video-open');
+  projectModal.querySelector('.case-live-link').focus();
+});
 workCards.forEach((card,index) => {
   card.querySelectorAll('.project-preview,.case-study-link').forEach(button => button.addEventListener('click', () => openProject(index, button)));
 });
