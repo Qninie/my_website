@@ -132,6 +132,9 @@ document.querySelector('#app').innerHTML = `
       <a href="#skills" data-section="skills">Skills</a>
       <a href="#contact" data-section="contact">Contact</a>
     </nav>
+    <a class="resume-button" href="${assetUrl('Queenie-Tham-Resume.pdf')}" download="Queenie-Tham-Resume.pdf" aria-label="Download Queenie Tham's résumé">
+      <span class="resume-button-full">Download résumé</span><span class="resume-button-short">CV</span><i aria-hidden="true">↓</i>
+    </a>
   </header>
 
   <div class="sakura-cursor" aria-hidden="true">${cursorFlowerSvg()}</div>
@@ -284,15 +287,15 @@ document.querySelector('#app').innerHTML = `
           <p class="scene-label">Chapter three · Selected work</p>
           <h2 id="work-title">Where ideas become<br><em>useful experiences</em></h2>
         </div>
-        <p>A selection of projects that show how I move between user experience thinking, interface design and frontend development.</p>
+        <p>A selection of projects exploring how I bring together design, technology and creative problem-solving.</p>
       </header>
 
       <div class="work-filters" role="group" aria-label="Filter selected work by category">
         <button class="work-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
         <button class="work-filter" type="button" data-filter="web" aria-pressed="false">Web Systems</button>
-        <button class="work-filter" type="button" data-filter="ux" aria-pressed="false">UI/UX</button>
-        <button class="work-filter" type="button" data-filter="creative" aria-pressed="false">Creative Media</button>
-        <button class="work-filter" type="button" data-filter="learning" aria-pressed="false">Interactive Learning</button>
+        <button class="work-filter" type="button" data-filter="ux" aria-pressed="false">UI/UX Design</button>
+        <button class="work-filter" type="button" data-filter="creative" aria-pressed="false">Creative Work</button>
+        <span class="work-filter-indicator" aria-hidden="true"></span>
       </div>
 
       <div class="work-grid">
@@ -324,7 +327,7 @@ document.querySelector('#app').innerHTML = `
       <div class="skills-petals" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       <header class="skills-heading">
         <p class="scene-label">Chapter four · What I bring</p>
-        <h2 id="skills-title">Designing with empathy.<br><em>Building with intention.</em></h2>
+        <h2 id="skills-title">Designing with empathy<br><em>Building with intention</em></h2>
         <p>A growing toolkit across interface design and frontend development. The progress values below are temporary placeholders for now.</p>
       </header>
 
@@ -386,6 +389,7 @@ document.querySelector('#app').innerHTML = `
             <a href="mailto:qthamshinee@gmail.com"><span>✉</span><div><small>Email</small><strong>qthamshinee@gmail.com</strong></div></a>
             <a href="https://www.linkedin.com/in/queenie-tham" target="_blank" rel="noreferrer"><span>in</span><div><small>LinkedIn</small><strong>queenie-tham</strong></div></a>
             <a href="https://github.com/Qninie" target="_blank" rel="noreferrer"><span>gh</span><div><small>GitHub</small><strong>Qninie</strong></div></a>
+            <a href="${assetUrl('Queenie-Tham-Resume.pdf')}" download="Queenie-Tham-Resume.pdf"><span>↓</span><div><small>Résumé</small><strong>Download PDF</strong></div></a>
           </address>
         </div>
 
@@ -697,9 +701,31 @@ const workObserver = new IntersectionObserver(entries => {
 workCards.forEach(card => workObserver.observe(card));
 
 const workFilters = [...document.querySelectorAll('.work-filter')];
+const workFilterIndicator = document.querySelector('.work-filter-indicator');
 const workEmpty = document.querySelector('.work-empty');
-function filterWork(category) {
+let filterTransition = 0;
+function positionWorkFilterIndicator(button) {
+  workFilterIndicator.style.setProperty('--filter-left', `${button.offsetLeft}px`);
+  workFilterIndicator.style.setProperty('--filter-width', `${button.offsetWidth}px`);
+}
+async function filterWork(category) {
+  const transition = ++filterTransition;
   const visibleCards = [...workCards].filter(card => category === 'all' || card.dataset.category === category);
+  const activeButton = workFilters.find(button => button.dataset.filter === category);
+  workFilters.forEach(button => {
+    const isActive = button === activeButton;
+    button.classList.toggle('is-active', isActive);
+    button.setAttribute('aria-pressed', String(isActive));
+  });
+  positionWorkFilterIndicator(activeButton);
+
+  const outgoingCards = [...workCards].filter(card => !card.hidden);
+  await Promise.all(outgoingCards.map(card => card.animate([
+    { opacity:1, transform:'translateY(0)' },
+    { opacity:0, transform:'translateY(12px)' }
+  ], { duration:180, easing:'ease-out', fill:'forwards' }).finished.catch(() => {})));
+  if (transition !== filterTransition) return;
+
   workCards.forEach(card => {
     const isVisible = visibleCards.includes(card);
     card.hidden = !isVisible;
@@ -710,13 +736,14 @@ function filterWork(category) {
     visibleCards.slice(1).forEach((card,index) => card.classList.toggle('is-filter-even', index % 2 === 0));
   }
   workEmpty.hidden = visibleCards.length > 0;
-  workFilters.forEach(button => {
-    const isActive = button.dataset.filter === category;
-    button.classList.toggle('is-active', isActive);
-    button.setAttribute('aria-pressed', String(isActive));
-  });
+  visibleCards.forEach(card => card.animate([
+    { opacity:0, transform:'translateY(18px)' },
+    { opacity:1, transform:'translateY(0)' }
+  ], { duration:380, delay:60, easing:'cubic-bezier(.2,.75,.2,1)', fill:'both' }));
 }
 workFilters.forEach(button => button.addEventListener('click', () => filterWork(button.dataset.filter)));
+requestAnimationFrame(() => positionWorkFilterIndicator(workFilters.find(button => button.classList.contains('is-active'))));
+window.addEventListener('resize', () => positionWorkFilterIndicator(workFilters.find(button => button.classList.contains('is-active'))));
 
 const preparedScreenshotCarousels = new WeakSet();
 function prepareScreenshotCarousel(carousel) {
