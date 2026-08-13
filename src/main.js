@@ -149,7 +149,7 @@ const projects = [
     outcome:'A small working learning activity covering 13 household objects, followed by five questions with immediate correct or incorrect feedback.',
     highlights:[['13','Objects'],['5','Quiz questions'],['34','Interactive slides']],
     tools:['Canva','PowerPoint','Interaction Design','Educational Content'],
-    images:['living-room-game.png'],
+    images:['living-room-game-cover.png'],
     presentation:'living-room-interactive-game.pptx'
   }
 ];
