@@ -144,19 +144,19 @@
     padding:14px 5vw;
     justify-content:flex-start;
   }
-  .home-mark{position:relative;z-index:2;flex:0 0 auto}
+  .home-mark{position:relative;z-index:2;flex:1 1 auto;min-width:0}
   .nav-toggle{
     position:relative;
     z-index:3;
     display:grid;
-    flex:0 0 42px;
-    width:42px;
-    height:42px;
-    margin-left:auto;
+    flex:0 0 48px;
+    width:48px;
+    height:48px;
+    margin-left:10px;
     padding:0;
     place-items:center;
     border:1px solid rgba(185,122,149,.38);
-    border-radius:6px;
+    border-radius:8px;
     background:rgba(255,253,249,.78);
     color:#8b5f72;
   }
@@ -166,10 +166,10 @@
     border-top:1px solid currentColor;
     transition:transform .25s,top .25s;
   }
-  .nav-toggle span:first-child{top:16px}
-  .nav-toggle span:last-child{top:24px}
-  .nav-toggle[aria-expanded="true"] span:first-child{top:20px;transform:rotate(45deg)}
-  .nav-toggle[aria-expanded="true"] span:last-child{top:20px;transform:rotate(-45deg)}
+  .nav-toggle span:first-child{top:18px}
+  .nav-toggle span:last-child{top:27px}
+  .nav-toggle[aria-expanded="true"] span:first-child{top:23px;transform:rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span:last-child{top:23px;transform:rotate(-45deg)}
   .site-nav{
     position:absolute;
     z-index:1;
@@ -201,7 +201,16 @@
   }
   .site-nav a:after{display:none}
   .site-nav a.is-active{background:#f8edf1}
-  .resume-button{position:relative;z-index:3;margin-left:8px}
+  .resume-button{
+    position:relative;
+    z-index:3;
+    flex:0 0 72px;
+    justify-content:center;
+    height:48px;
+    margin-left:8px;
+    padding:0 12px;
+    border-radius:8px;
+  }
 
   .hero-nature{opacity:.5}
   .hero-intro{isolation:isolate;padding:30px 5vw 34px 4vw}
