@@ -135,6 +135,109 @@
   background:rgba(250,248,245,.72);
   box-shadow:0 20px 60px rgba(89,69,75,.045);
 }
+
+/* Mobile polish: compact navigation and clearer responsive storytelling. */
+.nav-toggle{display:none}
+@media(max-width:720px){
+  .home-nav{
+    min-height:68px;
+    padding:14px 5vw;
+    justify-content:flex-start;
+  }
+  .home-mark{position:relative;z-index:2;flex:0 0 auto}
+  .nav-toggle{
+    position:relative;
+    z-index:3;
+    display:grid;
+    flex:0 0 42px;
+    width:42px;
+    height:42px;
+    margin-left:auto;
+    padding:0;
+    place-items:center;
+    border:1px solid rgba(185,122,149,.38);
+    border-radius:6px;
+    background:rgba(255,253,249,.78);
+    color:#8b5f72;
+  }
+  .nav-toggle span{
+    position:absolute;
+    width:17px;
+    border-top:1px solid currentColor;
+    transition:transform .25s,top .25s;
+  }
+  .nav-toggle span:first-child{top:16px}
+  .nav-toggle span:last-child{top:24px}
+  .nav-toggle[aria-expanded="true"] span:first-child{top:20px;transform:rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span:last-child{top:20px;transform:rotate(-45deg)}
+  .site-nav{
+    position:absolute;
+    z-index:1;
+    left:5vw;
+    right:5vw;
+    top:calc(100% + 8px);
+    display:grid;
+    max-width:none;
+    margin:0;
+    padding:10px;
+    gap:2px;
+    overflow:visible;
+    border:1px solid rgba(185,122,149,.2);
+    border-radius:8px;
+    background:rgba(250,248,245,.97);
+    box-shadow:0 18px 45px rgba(71,57,62,.12);
+    backdrop-filter:blur(18px);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-8px);
+    transition:opacity .22s,transform .22s,visibility .22s;
+  }
+  .site-nav.is-open{opacity:1;visibility:visible;transform:none}
+  .site-nav a{
+    display:block;
+    padding:12px 14px;
+    border-radius:5px;
+    font-size:9px;
+  }
+  .site-nav a:after{display:none}
+  .site-nav a.is-active{background:#f8edf1}
+  .resume-button{position:relative;z-index:3;margin-left:8px}
+
+  .hero-nature{opacity:.5}
+  .hero-intro{isolation:isolate;padding:30px 5vw 34px 4vw}
+  .hero-intro:before{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    inset:0;
+    border-radius:12px;
+    background:linear-gradient(90deg,rgba(250,248,245,.94),rgba(250,248,245,.78) 72%,rgba(250,248,245,.18));
+    box-shadow:0 15px 45px rgba(94,72,79,.05);
+  }
+  .hero-intro h1{text-shadow:0 2px 18px rgba(255,255,255,.85)}
+
+  .paper-panel{
+    background-image:url('../assets/fairytale-sakura-door-mobile.png');
+    background-size:200% 100%;
+  }
+  .panel-left{background-position:left center}
+  .panel-right{background-position:right center}
+
+  .scroll-butterfly-guide.is-tree-orbiting .guide-tip{
+    left:auto;
+    right:44px;
+    width:min(190px,calc(100vw - 90px));
+    max-width:calc(100vw - 90px);
+    padding:10px 12px;
+    border-radius:15px 15px 3px 15px;
+    font-size:7px;
+    line-height:1.6;
+    transform:translate(0,-50%);
+  }
+  .scroll-butterfly-guide.is-tree-orbiting.has-tip .guide-tip{transform:translate(0,-50%)}
+
+  .project-info .case-study-link{margin-top:20px}
+}
 .milestone-copy h3{font-size:clamp(30px,3.2vw,48px)}
 .milestone-copy>p:not(.milestone-type){font-size:14px;line-height:1.9}
 .milestone-highlights{
@@ -905,5 +1008,17 @@ html{scrollbar-gutter:stable}.memory-modal .back-to-tree,.project-modal-close{po
   .project-modal .project-modal-close{
     top:20px!important;
     left:6vw!important;
+  }
+}
+
+@media(max-width:720px){
+  .scroll-butterfly-guide.is-tree-orbiting .guide-tip,
+  .scroll-butterfly-guide.is-tree-orbiting.has-tip .guide-tip{
+    left:auto;
+    right:44px;
+    width:min(190px,calc(100vw - 90px));
+    max-width:calc(100vw - 90px);
+    border-radius:15px 15px 3px 15px;
+    transform:translate(0,-50%);
   }
 }

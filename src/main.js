@@ -170,7 +170,10 @@ const toolIcons = {
 document.querySelector('#app').innerHTML = `
   <header class="home-nav" aria-label="Primary navigation">
     <a class="home-mark" href="#greeting" aria-label="Queenie, back to beginning">Queenie</a>
-    <nav class="site-nav" aria-label="Portfolio chapters">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-navigation" aria-label="Portfolio chapters">
       <a class="is-active" href="#door-scene" data-section="door-scene">Discover</a>
       <a href="#journey" data-section="journey">Journey</a>
       <a href="#work" data-section="work">Work</a>
@@ -706,6 +709,20 @@ window.addEventListener('scroll', () => {
 updateScrollScenes();
 
 const navLinks = [...document.querySelectorAll('.site-nav a')];
+const navToggle = document.querySelector('.nav-toggle');
+const siteNav = document.querySelector('.site-nav');
+function closeMobileNavigation() {
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.setAttribute('aria-label', 'Open navigation menu');
+  siteNav.classList.remove('is-open');
+}
+navToggle.addEventListener('click', () => {
+  const willOpen = navToggle.getAttribute('aria-expanded') !== 'true';
+  navToggle.setAttribute('aria-expanded', String(willOpen));
+  navToggle.setAttribute('aria-label', willOpen ? 'Close navigation menu' : 'Open navigation menu');
+  siteNav.classList.toggle('is-open', willOpen);
+});
+navLinks.forEach(link => link.addEventListener('click', closeMobileNavigation));
 const navSections = navLinks.map(link => document.getElementById(link.dataset.section)).filter(Boolean);
 new IntersectionObserver(entries => {
   const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
@@ -1081,6 +1098,7 @@ function closeModal() {
 }
 modal.addEventListener('click', closeModal);
 window.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeMobileNavigation();
   if (event.key === 'Escape' && !modal.hidden) closeModal();
   if (event.key === 'Escape' && !projectModal.hidden) closeProject();
 });
