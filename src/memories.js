@@ -13,6 +13,7 @@ export const memories = [
       { label: 'Now', caption: 'Still learning, still growing.', image: './assets/flower1-now.jpg' }
     ],
     tree: { x: 50, y: 29 },
+    mobileTree: { x: 50, y: 18 },
     position: { x: 50, y: 12 }
   },
   {
@@ -29,6 +30,7 @@ export const memories = [
       { label: 'Full Circle', caption: 'Returning to ISSNITE in a senior role', image: './assets/flower2-senior.jpg' }
     ],
     tree: { x: 65, y: 43 },
+    mobileTree: { x: 76, y: 40 },
     position: { x: 88, y: 48 }
   },
   {
@@ -48,6 +50,7 @@ export const memories = [
       { label: 'New Experiences', caption: 'Making memories beyond the classroom', image: './assets/flower3-classroom-8.jpg' }
     ],
     tree: { x: 51, y: 58 },
+    mobileTree: { x: 50, y: 63 },
     position: { x: 50, y: 86 }
   },
   {
@@ -63,6 +66,7 @@ export const memories = [
       { label: 'Design in Progress', caption: 'Bringing an idea to life in Figma', image: './assets/flower4-design-process.jpeg' }
     ],
     tree: { x: 35, y: 43 },
+    mobileTree: { x: 24, y: 40 },
     position: { x: 12, y: 50 }
   }
 ];

@@ -235,7 +235,7 @@ document.querySelector('#app').innerHTML = `
           <div class="blossom-tree" aria-label="Interactive blossom memory tree">
             <img class="tree-art" src="${assetUrl('memory-tree-filled.png')}" alt="A full watercolor cherry blossom tree" />
             ${memories.map((memory,i)=>`
-              <button class="memory-flower" data-index="${i}" style="--tree-x:${memory.tree.x}%;--tree-y:${memory.tree.y}%" aria-label="Discover ${memory.title} memory">
+              <button class="memory-flower" data-index="${i}" style="--tree-x:${memory.tree.x}%;--tree-y:${memory.tree.y}%;--mobile-tree-x:${memory.mobileTree?.x ?? memory.tree.x}%;--mobile-tree-y:${memory.mobileTree?.y ?? memory.tree.y}%" aria-label="Discover ${memory.title} memory">
                 <span class="bud-layer">${flowerSvg('memory-closed-flower')}</span>
                 <span class="bloom-layer">${flowerSvg('memory-flower-svg')}</span>
               </button>`).join('')}
@@ -628,7 +628,10 @@ function startTreeButterflyTour() {
   if (flowerStops.length !== memories.length) return;
 
   treeButterflyTourStarted = true;
-  const finalStop = { x: innerWidth * .78, y: innerHeight * .62 };
+  const isMobileTree = matchMedia('(max-width:720px)').matches;
+  const finalStop = isMobileTree
+    ? { x: innerWidth * .5, y: innerHeight * .20 }
+    : { x: innerWidth * .78, y: innerHeight * .62 };
   const tourStops = [
     { x: -60, y: Math.max(innerHeight * .55, flowerStops[0].y + 70) },
     ...flowerStops,
@@ -648,8 +651,8 @@ function startTreeButterflyTour() {
   });
   tour.finished.then(() => {
     treeButterflyTourComplete = true;
-    scrollButterflyGuide.style.setProperty('--guide-screen-x', '78vw');
-    scrollButterflyGuide.style.setProperty('--guide-screen-y', '62vh');
+    scrollButterflyGuide.style.setProperty('--guide-screen-x', isMobileTree ? '50vw' : '78vw');
+    scrollButterflyGuide.style.setProperty('--guide-screen-y', isMobileTree ? '34vh' : '62vh');
     scrollButterflyGuide.classList.add('has-tip');
     tour.cancel();
   }).catch(() => {});
@@ -681,8 +684,9 @@ function updateScrollScenes() {
   let guideX;
   let guideY;
   if (treeGuideVisible) {
-    guideX = innerWidth * .78;
-    guideY = innerHeight * .54;
+    const isMobileTree = matchMedia('(max-width:720px)').matches;
+    guideX = innerWidth * (isMobileTree ? .5 : .78);
+    guideY = innerHeight * (isMobileTree ? .34 : .54);
   } else if (journeyGuideVisible) {
     guideX = railRect.left + railRect.width / 2;
     guideY = railGuideY;
