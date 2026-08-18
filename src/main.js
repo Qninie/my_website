@@ -440,6 +440,7 @@ document.querySelector('#app').innerHTML = `
             <a href="https://github.com/Qninie" target="_blank" rel="noreferrer"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.3 9.3 0 0 0-2.94 18.12c.47.08.64-.2.64-.45v-1.8c-2.62.57-3.17-1.11-3.17-1.11-.43-1.09-1.05-1.38-1.05-1.38-.86-.59.06-.58.06-.58.95.07 1.45.98 1.45.98.85 1.44 2.22 1.03 2.76.79.09-.61.33-1.03.6-1.27-2.09-.24-4.29-1.05-4.29-4.65 0-1.03.37-1.87.97-2.53-.1-.24-.42-1.2.09-2.5 0 0 .79-.25 2.56.97a8.9 8.9 0 0 1 4.66 0c1.78-1.22 2.56-.97 2.56-.97.51 1.3.19 2.26.09 2.5.61.66.97 1.5.97 2.53 0 3.61-2.2 4.4-4.3 4.64.34.29.64.87.64 1.76v2.62c0 .25.17.54.65.45A9.3 9.3 0 0 0 12 2.8Z"/></svg></span><div><small>GitHub</small><strong>Qninie</strong></div></a>
             <a href="${assetUrl('Queenie-Tham-Resume.pdf')}" download="Queenie-Tham-Resume.pdf"><span>↓</span><div><small>Résumé</small><strong>Download PDF</strong></div></a>
           </address>
+
         </div>
 
         <div class="contact-form-wrap">
@@ -454,6 +455,27 @@ document.querySelector('#app').innerHTML = `
             <p class="form-note">Opens your email app with the message prepared.</p>
           </form>
         </div>
+
+        <section class="professional-references" aria-labelledby="references-title">
+          <p class="scene-label" id="references-title">Professional References</p>
+          <div class="reference-list">
+            <article class="reference-card">
+              <p class="reference-role">Company Supervisor</p>
+              <h3>Rooy, Liew Chong How</h3>
+              <p>Senior Customer Experience Consultant<br>Hitachi eBworx</p>
+              <a href="mailto:chliew@hitachi-ebworx.com">chliew@hitachi-ebworx.com</a>
+              <a href="tel:+60165981588">+60 16-598 1588</a>
+            </article>
+            <article class="reference-card">
+              <p class="reference-role">University Supervisor</p>
+              <h3>Yanty Rahayu binti Rambli</h3>
+              <p>Senior Lecturer<br>Faculty of Information Science<br>Universiti Teknologi MARA (UiTM)</p>
+              <a href="mailto:yanty@uitm.edu.my">yanty@uitm.edu.my</a>
+              <a href="mailto:ayuu76@yahoo.com">ayuu76@yahoo.com</a>
+              <a href="tel:+60174710776">+60 17-471 0776</a>
+            </article>
+          </div>
+        </section>
       </div>
 
       <footer class="world-footer">
